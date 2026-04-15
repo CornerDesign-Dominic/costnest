@@ -96,7 +96,7 @@
     var page = document.body ? document.body.getAttribute('data-page') : '';
     var isHome = page === 'home';
     var isCollectionsArea = page === 'collections' || page === 'collection-detail';
-    var isTemplatesPage = page === 'templates';
+    var isTemplatesPage = page === 'templates' || page === 'template-detail';
 
     var homeHref = isHome ? 'index.html' : '../index.html';
     var collectionsHref = isHome ? 'pages/collections.html' : 'collections.html';

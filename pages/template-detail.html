@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Costnest | Vorlagen</title>
-  <meta name="description" content="Vorlagen fuer typische Vorhaben als schneller Einstieg in neue Sammlungen.">
+  <title>Costnest | Vorlage</title>
+  <meta name="description" content="Vorlage pruefen und in eine normale Sammlung umwandeln.">
   <script>
     (function () {
       var key = 'costnest.theme';
@@ -32,26 +32,46 @@
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/pages.css">
 </head>
-<body data-page="templates">
+<body data-page="template-detail">
   <a class="skip-link" href="#content">Zum Inhalt springen</a>
   <div id="app-header"></div>
 
-  <main id="content" class="page page-templates">
-    <section class="page-head">
-      <h1>Vorlagen</h1>
-      <p>Starte schneller mit vorbereiteten Sammlungen fuer typische Vorhaben.</p>
+  <main id="content" class="page page-template-detail">
+    <section class="card empty-state" id="template-not-found" hidden>
+      <h1>Vorlage nicht gefunden</h1>
+      <p>Bitte waehle eine Vorlage aus der Uebersicht.</p>
+      <a class="button button-primary" href="templates.html">Zurueck</a>
     </section>
 
-    <section class="template-grid" id="template-list" aria-label="Vorlagenuebersicht"></section>
+    <section id="template-detail-content" hidden>
+      <section class="page-head page-head--with-action template-detail-head">
+        <div>
+          <h1 id="template-title">Vorlage</h1>
+          <p id="template-intro"></p>
+        </div>
+        <button type="button" class="button button-primary" id="convert-template-top">In Sammlung umwandeln</button>
+      </section>
+
+      <section class="template-suggestions-list" id="template-suggestions-list" aria-label="Vorschlaege"></section>
+
+      <section class="template-detail-footer-action">
+        <button type="button" class="button button-primary" id="convert-template-bottom">In Sammlung umwandeln</button>
+      </section>
+    </section>
   </main>
   <div id="app-footer"></div>
 
   <script src="../assets/js/core/namespace.js" defer></script>
+  <script src="../assets/js/utils/currency.js" defer></script>
+  <script src="../assets/js/utils/id.js" defer></script>
+  <script src="../assets/js/storage/local-storage-service.js" defer></script>
   <script src="../assets/js/data/template-repository.js" defer></script>
+  <script src="../assets/js/data/collection-repository.js" defer></script>
+  <script src="../assets/js/data/item-repository.js" defer></script>
   <script src="../assets/js/ui/header.js" defer></script>
   <script src="../assets/js/ui/footer.js" defer></script>
   <script src="../assets/js/ui/toast.js" defer></script>
-  <script src="../assets/js/pages/templates-page.js" defer></script>
+  <script src="../assets/js/pages/template-detail-page.js" defer></script>
   <script src="../assets/js/core/bootstrap.js" defer></script>
 </body>
 </html>

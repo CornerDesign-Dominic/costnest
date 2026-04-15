@@ -118,7 +118,7 @@
   function resolveCollectionName(name) {
     var rawName = typeof name === 'string' ? name.trim() : '';
     if (rawName) {
-      return rawName;
+      return ensureUniqueCollectionName(rawName);
     }
 
     var collections = getAll();
@@ -132,7 +132,31 @@
       return Number.isFinite(num) && num > acc ? num : acc;
     }, 0);
 
-    return 'Sammlung ' + (maxNumber + 1);
+    return ensureUniqueCollectionName('Sammlung ' + (maxNumber + 1));
+  }
+
+  function ensureUniqueCollectionName(baseName) {
+    var collections = getAll();
+    var existingNames = collections.map(function (collection) {
+      return String(collection.name || '').trim().toLocaleLowerCase('de-DE');
+    });
+    var normalizedBaseName = baseName.trim().toLocaleLowerCase('de-DE');
+
+    if (existingNames.indexOf(normalizedBaseName) === -1) {
+      return baseName;
+    }
+
+    var suffix = 2;
+    while (suffix <= 9999) {
+      var nextName = baseName + ' (' + suffix + ')';
+      var normalizedNext = nextName.toLocaleLowerCase('de-DE');
+      if (existingNames.indexOf(normalizedNext) === -1) {
+        return nextName;
+      }
+      suffix += 1;
+    }
+
+    return baseName + ' (' + Date.now() + ')';
   }
 
   function getAllWithStats() {

@@ -25,6 +25,14 @@
     if (Costnest.pages && Costnest.pages.collectionDetail && typeof Costnest.pages.collectionDetail.init === 'function') {
       Costnest.pages.collectionDetail.init();
     }
+
+    if (Costnest.pages && Costnest.pages.templates && typeof Costnest.pages.templates.init === 'function') {
+      Costnest.pages.templates.init();
+    }
+
+    if (Costnest.pages && Costnest.pages.templateDetail && typeof Costnest.pages.templateDetail.init === 'function') {
+      Costnest.pages.templateDetail.init();
+    }
   }
 
   if (document.readyState === 'loading') {
