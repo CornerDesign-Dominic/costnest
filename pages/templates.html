@@ -39,10 +39,25 @@
   <main id="content" class="page page-templates">
     <section class="page-head">
       <h1>Vorlagen</h1>
-      <p>Starte schneller mit vorbereiteten Sammlungen fuer typische Vorhaben.</p>
+      <p>Strukturiert nach Themen fuer einen schnellen, klaren Einstieg.</p>
     </section>
 
-    <section class="template-grid" id="template-list" aria-label="Vorlagenuebersicht"></section>
+    <section class="card templates-controls" aria-label="Vorlagen filtern">
+      <div class="templates-controls__search">
+        <label for="template-search" class="templates-controls__label">Suche</label>
+        <input id="template-search" type="search" placeholder="Vorlage suchen" autocomplete="off" aria-describedby="template-search-hint">
+        <p id="template-search-hint" class="templates-controls__hint">Suche ueber Vorlagen und Kategorien.</p>
+      </div>
+
+      <div class="templates-controls__chips" id="template-category-filters" aria-label="Kategoriefilter"></div>
+    </section>
+
+    <section class="templates-groups" id="template-groups" aria-label="Vorlagen nach Kategorien"></section>
+
+    <section class="card empty-state" id="templates-empty-state" hidden>
+      <h2>Keine Treffer</h2>
+      <p>Suche oder Filter anpassen.</p>
+    </section>
   </main>
   <div id="app-footer"></div>
 
