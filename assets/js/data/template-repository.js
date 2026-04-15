@@ -13,8 +13,13 @@
           slug: 'geburtstagsfeier',
           name: 'Geburtstagsfeier',
           description: 'Alles Wichtige fuer eine entspannte Feier.',
-          intro: 'Waehle aus, was du fuer den Geburtstag direkt uebernehmen willst.',
-          purposeText: 'Erstelle eine Einkaufsliste fuer deine naechste Geburtstagsfeier und plane Deko sowie Verbrauchsmaterial geordnet vor.',
+          intro: 'Waehle aus, was du fuer die Feier direkt in deine Sammlung uebernehmen willst.',
+          purposeText: 'Diese Vorlage hilft dir, eine Geburtstagsfeier strukturiert zu planen und alle wichtigen Dinge im Blick zu behalten - von Deko bis Verbrauchsmaterial.',
+          details: [
+            'Bei einer Geburtstagsfeier gehen oft viele kleine Dinge vergessen, besonders Verbrauchsmaterial wie Teller, Becher oder Kerzen.',
+            'Mit einer vorbereiteten Liste kannst du alles im Voraus planen und musst nicht mehrfach einkaufen.',
+            'Die Vorlage eignet sich besonders fuer private Feiern zu Hause oder im Garten.'
+          ],
           seoTitle: 'Vorlage Geburtstagsfeier | Costnest',
           seoDescription: 'Plane deine Geburtstagsfeier mit einer klaren Vorlage fuer typische Einkaeufe und ueberfuehre sie direkt in eine Sammlung.',
           suggestions: [
@@ -30,8 +35,13 @@
           slug: 'silvester',
           name: 'Silvester',
           description: 'Getraenke, Deko und Basics fuer den Jahreswechsel.',
-          intro: 'Aktiviere die Vorschlaege, die fuer deine Silvesterplanung passen.',
-          purposeText: 'Sammle typische Einkaeufe fuer Silvester an einem Ort, damit du schnell siehst, was noch fehlt.',
+          intro: 'Nutze die Liste fuer eine klare Silvester-Planung ohne spontane Nachkaeufe.',
+          purposeText: 'Mit dieser Vorlage planst du typische Silvester-Einkaeufe in einem Schritt und behältst Deko, Verbrauchsmaterial und Kleinteile zusammen.',
+          details: [
+            'Zum Jahreswechsel fehlen haeufig erst kurz vorher Dinge wie Einwegglaeser, Servietten oder Tischdeko.',
+            'Wenn du alles frueh sammelst, kannst du Mengen besser abschaetzen und Last-Minute-Stress vermeiden.',
+            'Die Vorlage passt fuer Feiern zu Hause, in kleinen Gruppen oder fuer eine gemeinsame Feier mit Freunden.'
+          ],
           seoTitle: 'Vorlage Silvester | Costnest',
           seoDescription: 'Nutze die Silvester-Vorlage, um typische Einkaeufe strukturiert zu sammeln und als Sammlung weiterzuverwenden.',
           suggestions: [
@@ -47,8 +57,13 @@
           slug: 'weihnachten',
           name: 'Weihnachten',
           description: 'Typische Besorgungen fuer ruhige Feiertage.',
-          intro: 'Setze nur die Punkte auf aktiv, die du in deine Weihnachtsliste uebernehmen willst.',
-          purposeText: 'Plane deine Weihnachts-Einkaeufe fruehzeitig und behalte bei wiederkehrenden Artikeln den Ueberblick.',
+          intro: 'Stelle deine Weihnachts-Einkaeufe frueh zusammen und uebernehme nur relevante Punkte.',
+          purposeText: 'Diese Vorlage hilft dir, wiederkehrende Weihnachts-Besorgungen geordnet vorzubereiten und nichts Wichtiges zu uebersehen.',
+          details: [
+            'Gerade vor den Feiertagen kommen viele Besorgungen zusammen, vom Verpackungsmaterial bis zur Tischgestaltung.',
+            'Mit einer festen Vorlage kannst du wiederkehrende Artikel jedes Jahr schnell erneut nutzen und anpassen.',
+            'So bleiben Aufwand und Kosten besser planbar, auch wenn mehrere Termine oder Besuche anstehen.'
+          ],
           seoTitle: 'Vorlage Weihnachten | Costnest',
           seoDescription: 'Erstelle mit der Weihnachts-Vorlage eine geordnete Einkaufssammlung fuer die Feiertage und behalte Kosten im Blick.',
           suggestions: [
@@ -72,8 +87,13 @@
           slug: 'urlaub-zelten',
           name: 'Zelten',
           description: 'Basis-Ausstattung fuer den Campingtrip.',
-          intro: 'Waehle die Teile, die in deine Camping-Sammlung sollen.',
-          purposeText: 'Erstelle eine Einkaufsliste fuer deinen naechsten Strand- oder Campingurlaub mit den wichtigsten Basics.',
+          intro: 'Lege deine Camping-Basics als strukturierte Einkaufsliste fuer die Reise an.',
+          purposeText: 'Mit dieser Vorlage stellst du sicher, dass du fuer deinen Zelturlaub alles Wichtige dabei hast - von Schlafausruestung bis Verpflegung.',
+          details: [
+            'Beim Zelten ist eine gute Vorbereitung entscheidend, da fehlende Ausruestung unterwegs oft schwer zu ersetzen ist.',
+            'Typische Essentials sind Zelt, Schlafsack, Beleuchtung und einfache Kochmoeglichkeiten.',
+            'Je nach Dauer und Ort der Reise kannst du die Liste schnell erweitern oder reduzieren.'
+          ],
           seoTitle: 'Vorlage Urlaub Zelten | Costnest',
           seoDescription: 'Plane deinen Campingurlaub mit einer Vorlage fuer wichtige Ausruestung und uebernimm sie mit einem Klick als Sammlung.',
           suggestions: [
@@ -89,8 +109,13 @@
           slug: 'urlaub-schiffsreise',
           name: 'Schiffsreise',
           description: 'Wichtige Reiseartikel fuer Tage an Bord.',
-          intro: 'Markiere die Vorschlaege, die du fuer die Schiffsreise brauchst.',
-          purposeText: 'Bereite deine Schiffsreise strukturiert vor und halte Reiseartikel sowie geplante Kosten sauber zusammen.',
+          intro: 'Nutze die Vorlage, um wichtige Reiseartikel fuer deine Schiffsreise frueh zusammenzustellen.',
+          purposeText: 'Diese Vorlage hilft dir, typische Besorgungen fuer Tage an Bord geordnet zu planen und mit realistischen Mengen zu erfassen.',
+          details: [
+            'Auf Schiffsreisen werden oft spezielle Dinge gebraucht, etwa Sonnenschutz, Adapter oder komfortable Reise-Accessoires.',
+            'Wenn du die Liste vorab planst, kannst du Fehlkaeufe vermeiden und offene Punkte schnell nachverfolgen.',
+            'Die Vorlage eignet sich fuer kurze Kreuzfahrten und laengere Reisen mit mehreren Stopps.'
+          ],
           seoTitle: 'Vorlage Urlaub Schiffsreise | Costnest',
           seoDescription: 'Nutze eine geordnete Schiffsreise-Vorlage fuer Reiseeinkaeufe und verwandle sie direkt in eine bearbeitbare Sammlung.',
           suggestions: [
@@ -106,8 +131,13 @@
           slug: 'urlaub-staedtetrip',
           name: 'Staedtetrip',
           description: 'Kompakte Liste fuer kurze Reisen.',
-          intro: 'Nimm nur mit, was fuer deinen Staedtetrip wirklich relevant ist.',
-          purposeText: 'Nutze diese Vorlage fuer einen kompakten Staedtetrip und ordne wiederkehrende Reiseeinkaeufe in einer Liste.',
+          intro: 'Plane einen kurzen Staedtetrip mit einer kompakten, realistischen Einkaufsliste.',
+          purposeText: 'Diese Vorlage deckt die wichtigsten Besorgungen fuer einen Staedtetrip ab und hilft dir, mit wenig Aufwand vorbereitet zu starten.',
+          details: [
+            'Bei kurzen Reisen sind praktische Basics wichtiger als eine lange Packliste, zum Beispiel Tagesrucksack, Powerbank und Adapter.',
+            'Mit einer festen Vorlage kannst du wiederkehrende Reiseeinkaeufe schneller treffen und doppelte Kaeufe vermeiden.',
+            'Die Liste ist bewusst kompakt und laesst sich bei Bedarf um wetter- oder ortsspezifische Punkte erweitern.'
+          ],
           seoTitle: 'Vorlage Urlaub Staedtetrip | Costnest',
           seoDescription: 'Behalte beim Staedtetrip den Ueberblick: Vorlage auswaehlen, Einkaeufe ordnen und als Sammlung weiterverwenden.',
           suggestions: [
@@ -131,8 +161,13 @@
           slug: 'bueromaterial',
           name: 'Bueromaterial',
           description: 'Die wichtigsten Basics fuer den Arbeitsalltag.',
-          intro: 'Aktiviere die Vorschlaege, die du in deine Material-Sammlung uebernehmen willst.',
-          purposeText: 'Erfasse deine Sammlung fuer Bueromaterialien, die du regelmaessig brauchst, und speichere Alternativen zum Sparen.',
+          intro: 'Baue dir eine verlässliche Einkaufsliste fuer regelmaessig benoetigtes Buerozubehoer auf.',
+          purposeText: 'Diese Vorlage hilft dir, regelmaessig benoetigtes Bueromaterial gebuendelt zu verwalten und gezielt nachzubestellen.',
+          details: [
+            'Im Bueroalltag fehlen oft kleine Dinge wie Stifte, Papier oder Verbrauchsmaterial genau dann, wenn sie gebraucht werden.',
+            'Mit einer festen Sammlung kannst du Nachkaeufe planen, Alternativen vergleichen und Zeit sparen.',
+            'Besonders sinnvoll ist die Vorlage fuer Homeoffice, kleine Teams und wiederkehrende Monatskaeufe.'
+          ],
           seoTitle: 'Vorlage Bueromaterial | Costnest',
           seoDescription: 'Ordne Bueroeinkaeufe mit der Vorlage Bueromaterial und erstelle daraus schnell eine wiederverwendbare Sammlung.',
           suggestions: [
@@ -148,8 +183,13 @@
           slug: 'homeoffice',
           name: 'Homeoffice',
           description: 'Praktische Ausstattung fuer konzentriertes Arbeiten zu Hause.',
-          intro: 'Waehle die Punkte aus, die du fuer dein Homeoffice einplanen willst.',
-          purposeText: 'Stelle eine uebersichtliche Homeoffice-Liste zusammen, damit wichtige Anschaffungen schnell vergleichbar bleiben.',
+          intro: 'Erfasse wichtige Homeoffice-Anschaffungen in einer klaren, wiederverwendbaren Liste.',
+          purposeText: 'Die Vorlage unterstuetzt dich dabei, dein Homeoffice strukturiert aufzubauen und noetige Anschaffungen sinnvoll zu priorisieren.',
+          details: [
+            'Gerade beim Einrichten von Arbeitsplaetzen zu Hause werden Ergonomie und Technik oft stueckweise und ungeplant gekauft.',
+            'Mit einer geordneten Vorlage kannst du Bedarfe nach Wichtigkeit priorisieren und Preise besser vergleichen.',
+            'So entsteht Schritt fuer Schritt eine funktionale Ausstattung ohne den Ueberblick zu verlieren.'
+          ],
           seoTitle: 'Vorlage Homeoffice | Costnest',
           seoDescription: 'Die Homeoffice-Vorlage hilft dir, Arbeitsmaterial geordnet zu sammeln und geplante Ausgaben im Blick zu behalten.',
           suggestions: [
@@ -173,8 +213,13 @@
           slug: 'schulbeginn',
           name: 'Schulbeginn',
           description: 'Grundausstattung fuer den Start ins Schuljahr.',
-          intro: 'Setze die Vorschlaege auf aktiv, die du direkt uebernehmen willst.',
-          purposeText: 'Plane den Schulstart mit einer klaren Liste fuer Material und behalte die Gesamtausgaben frueh im Blick.',
+          intro: 'Nutze diese Vorlage, um alle wichtigen Materialien fuer den Schulstart geordnet einzuplanen.',
+          purposeText: 'Mit dieser Vorlage behaeltst du den Ueberblick ueber alle wichtigen Dinge zum Schulbeginn und vermeidest doppelte Kaeufe.',
+          details: [
+            'Zum Schulbeginn muessen oft viele Materialien gleichzeitig organisiert werden, von Heften bis Schreibzubehoer.',
+            'Gerade bei mehreren Kindern oder Klassenlisten geht ohne Struktur schnell ein Artikel unter.',
+            'Die Vorlage hilft dir, systematisch einzukaufen und vorbereitet ins Schuljahr zu starten.'
+          ],
           seoTitle: 'Vorlage Schulbeginn | Costnest',
           seoDescription: 'Starte organisiert ins Schuljahr: mit der Vorlage Schulbeginn fuer wichtige Besorgungen und klare Kostenuebersicht.',
           suggestions: [
@@ -190,8 +235,13 @@
           slug: 'klassenfahrt',
           name: 'Klassenfahrt',
           description: 'Packliste und Besorgungen fuer mehrtaegige Fahrten.',
-          intro: 'Waehle die Punkte aus, die fuer die Klassenfahrt relevant sind.',
-          purposeText: 'Nutze die Vorlage fuer Klassenfahrten, um Ausruestung und Besorgungen geordnet und stressfrei vorzubereiten.',
+          intro: 'Bereite Besorgungen fuer eine mehrtaegige Klassenfahrt strukturiert und nachvollziehbar vor.',
+          purposeText: 'Diese Vorlage hilft dir, wichtige Ausruestung fuer Klassenfahrten vollstaendig zu planen und kurz vor Abfahrt nichts zu vergessen.',
+          details: [
+            'Vor Klassenfahrten werden oft Reisegepaeck, Kleidung und kleinere Alltagsartikel gleichzeitig benoetigt.',
+            'Mit einer vorbereiteten Liste lassen sich fehlende Dinge frueh erkennen und in Ruhe besorgen.',
+            'Die Vorlage ist besonders hilfreich fuer mehrtaegige Fahrten mit wechselndem Wetter.'
+          ],
           seoTitle: 'Vorlage Klassenfahrt | Costnest',
           seoDescription: 'Plane eine Klassenfahrt mit einer kompakten Vorlage fuer Packliste und typische Einkaeufe.',
           suggestions: [

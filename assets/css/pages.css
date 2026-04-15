@@ -605,6 +605,7 @@ body[data-page="collection-detail"] .fab {
 .page-template-detail {
   display: grid;
   gap: 24px;
+  padding-bottom: 120px;
 }
 
 .template-detail-nav {
@@ -665,13 +666,6 @@ body[data-page="collection-detail"] .fab {
   max-width: 70ch;
 }
 
-.template-detail-top-action {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 8px;
-  margin-bottom: 32px;
-}
-
 .template-suggestions-list {
   display: grid;
   gap: 12px;
@@ -727,6 +721,21 @@ body[data-page="collection-detail"] .fab {
   margin-top: 32px;
   display: flex;
   justify-content: center;
+}
+
+.template-floating-cta {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  z-index: 100;
+  width: auto;
+  max-width: 90%;
+  margin-top: 0;
+}
+
+.template-floating-cta .button {
+  box-shadow: var(--shadow-soft);
 }
 
 .template-related {
@@ -877,10 +886,15 @@ body[data-page="collection-detail"] .fab {
     justify-content: flex-end;
   }
 
-  .template-detail-footer-action .button,
-  .template-detail-top-action .button {
+  .template-detail-footer-action .button {
     width: 100%;
     justify-content: center;
+  }
+
+  .template-floating-cta {
+    width: calc(100% - 20px);
+    max-width: 460px;
+    bottom: calc(14px + env(safe-area-inset-bottom, 0px));
   }
 
   body[data-page="collection-detail"] .page-collection-detail {

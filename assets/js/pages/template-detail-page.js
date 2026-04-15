@@ -14,10 +14,9 @@
     var suggestionsListElement = document.getElementById('template-suggestions-list');
     var relatedSection = document.getElementById('template-related');
     var relatedLinksElement = document.getElementById('template-related-links');
-    var topConvertButton = document.getElementById('convert-template-top');
     var bottomConvertButton = document.getElementById('convert-template-bottom');
 
-    if (!notFoundElement || !contentElement || !titleElement || !introCopyElement || !purposeCopyElement || !suggestionsListElement || !relatedSection || !relatedLinksElement || !topConvertButton || !bottomConvertButton) {
+    if (!notFoundElement || !contentElement || !titleElement || !introCopyElement || !purposeCopyElement || !suggestionsListElement || !relatedSection || !relatedLinksElement || !bottomConvertButton) {
       return;
     }
 
@@ -59,7 +58,6 @@
       syncConvertButtons();
     });
 
-    topConvertButton.addEventListener('click', convertToCollection);
     bottomConvertButton.addEventListener('click', convertToCollection);
 
     function syncConvertButtons() {
@@ -68,7 +66,6 @@
         ? 'In Sammlung umwandeln (' + selectedCount + ')'
         : 'In Sammlung umwandeln (0)';
 
-      topConvertButton.textContent = label;
       bottomConvertButton.textContent = label;
     }
 
