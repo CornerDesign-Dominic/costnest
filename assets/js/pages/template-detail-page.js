@@ -9,14 +9,15 @@
     var notFoundElement = document.getElementById('template-not-found');
     var contentElement = document.getElementById('template-detail-content');
     var titleElement = document.getElementById('template-title');
-    var purposeElement = document.getElementById('template-purpose');
+    var introCopyElement = document.getElementById('template-intro-copy');
+    var purposeCopyElement = document.getElementById('template-purpose-copy');
     var suggestionsListElement = document.getElementById('template-suggestions-list');
     var relatedSection = document.getElementById('template-related');
     var relatedLinksElement = document.getElementById('template-related-links');
     var topConvertButton = document.getElementById('convert-template-top');
     var bottomConvertButton = document.getElementById('convert-template-bottom');
 
-    if (!notFoundElement || !contentElement || !titleElement || !purposeElement || !suggestionsListElement || !relatedSection || !relatedLinksElement || !topConvertButton || !bottomConvertButton) {
+    if (!notFoundElement || !contentElement || !titleElement || !introCopyElement || !purposeCopyElement || !suggestionsListElement || !relatedSection || !relatedLinksElement || !topConvertButton || !bottomConvertButton) {
       return;
     }
 
@@ -35,7 +36,8 @@
     contentElement.hidden = false;
     notFoundElement.hidden = true;
     titleElement.textContent = template.name;
-    purposeElement.textContent = template.purposeText || template.intro || template.description || '';
+    introCopyElement.textContent = template.intro || 'Diese Vorlage hilft dir beim schnellen Einstieg.';
+    purposeCopyElement.textContent = template.purposeText || template.description || 'Waehle passende Vorschlaege aus und uebernimm sie in eine Sammlung.';
     applyTemplateSeo(template);
     renderRelatedTemplates();
 
@@ -148,6 +150,7 @@
 
     document.title = nextTitle;
     setMetaDescription(nextDescription);
+    setCanonicalUrl();
   }
 
   function setMetaDescription(content) {
@@ -159,6 +162,19 @@
     }
 
     meta.setAttribute('content', content);
+  }
+
+  function setCanonicalUrl() {
+    var canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+
+    var url = new URL(global.location.href);
+    url.hash = '';
+    canonical.setAttribute('href', url.toString());
   }
 
   function normalizeText(value) {

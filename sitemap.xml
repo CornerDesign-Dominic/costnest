@@ -1,16 +1,15 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://costnest.de/</loc>
-  </url>
-  <url>
-    <loc>https://costnest.de/pages/collections.html</loc>
-  </url>
-  <url>
-    <loc>https://costnest.de/pages/templates.html</loc>
-  </url>
-  <url>
-    <loc>https://costnest.de/pages/template-detail.html</loc>
-  </url>
-  <!-- Die Vorlagen-Detailseite ist aktuell parameterbasiert (templateId). Einzelne statische Detail-URLs folgen ggf. spaeter. -->
+  <url><loc>https://costnest.app/</loc></url>
+  <url><loc>https://costnest.app/pages/templates.html</loc></url>
+  <url><loc>https://costnest.app/pages/template-detail.html?templateId=geburtstagsfeier</loc></url>
+  <url><loc>https://costnest.app/pages/template-detail.html?templateId=silvester</loc></url>
+  <url><loc>https://costnest.app/pages/template-detail.html?templateId=weihnachten</loc></url>
+  <url><loc>https://costnest.app/pages/template-detail.html?templateId=urlaub-zelten</loc></url>
+  <url><loc>https://costnest.app/pages/template-detail.html?templateId=urlaub-schiffsreise</loc></url>
+  <url><loc>https://costnest.app/pages/template-detail.html?templateId=urlaub-staedtetrip</loc></url>
+  <url><loc>https://costnest.app/pages/template-detail.html?templateId=bueromaterial</loc></url>
+  <url><loc>https://costnest.app/pages/template-detail.html?templateId=homeoffice</loc></url>
+  <url><loc>https://costnest.app/pages/template-detail.html?templateId=schulbeginn</loc></url>
+  <url><loc>https://costnest.app/pages/template-detail.html?templateId=klassenfahrt</loc></url>
 </urlset>

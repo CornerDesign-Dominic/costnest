@@ -1,4 +1,4 @@
 ﻿User-agent: *
 Allow: /
 
-Sitemap: https://costnest.de/sitemap.xml
+Sitemap: https://costnest.app/sitemap.xml
