@@ -16,30 +16,71 @@
 
   <main id="content" class="page page-home">
     <section class="home-hero" id="costnest" aria-labelledby="home-hero-title">
-      <h1 id="home-hero-title">Preise im Blick. Einfach sammeln.</h1>
-      <p>Speichere Produkte, vergleiche Preise und behalte dein Budget im Griff.</p>
-      <button type="button" class="button button-primary" id="start-first-collection">Sammlung starten</button>
-      <small>Ohne Login · Daten bleiben lokal</small>
+      <div class="home-hero__content">
+        <p class="home-eyebrow">Lokal und sofort startklar</p>
+        <h1 id="home-hero-title">Preise sicher vergleichen. Entscheidungen ruhiger treffen.</h1>
+        <p class="home-subline">Sammle Produktlinks, halte Ist- und Wunschpreise im Blick und behalte den Gesamtstand deiner Sammlung jederzeit im Griff.</p>
+        <div class="home-cta-group">
+          <button type="button" class="button button-primary" id="start-first-collection">Sammlung starten</button>
+          <a class="button button-ghost" href="pages/collections.html">Sammlungen ansehen</a>
+        </div>
+        <ul class="home-trust-list" aria-label="Vorteile auf einen Blick">
+          <li>Ohne Konto</li>
+          <li>Direkt im Browser</li>
+          <li>Daten lokal gespeichert</li>
+        </ul>
+      </div>
+      <aside class="home-hero__preview" aria-label="Vorschau">
+        <article class="home-preview-card">
+          <header class="home-preview-card__head">
+            <h2>Küche</h2>
+            <span>4 Einträge</span>
+          </header>
+          <div class="home-preview-card__kpis">
+            <div>
+              <small>Ist gesamt</small>
+              <strong>429,00 €</strong>
+            </div>
+            <div>
+              <small>Wunsch gesamt</small>
+              <strong>395,00 €</strong>
+            </div>
+            <div>
+              <small>Differenz</small>
+              <strong class="is-positive">+34,00 €</strong>
+            </div>
+          </div>
+          <p class="home-preview-card__hint">Klarer Überblick vor dem Kauf.</p>
+        </article>
+      </aside>
     </section>
 
-    <section class="home-features" aria-label="Funktionen">
-      <article class="home-feature">
-        <h2>Sammeln</h2>
-        <p>Links speichern</p>
-      </article>
-      <article class="home-feature">
-        <h2>Vergleichen</h2>
-        <p>Preise im Blick</p>
-      </article>
-      <article class="home-feature">
-        <h2>Alternativen</h2>
-        <p>Optionen behalten</p>
-      </article>
+    <section class="home-benefits" aria-labelledby="home-benefits-title">
+      <header class="home-benefits__head">
+        <h2 id="home-benefits-title">Weniger suchen, besser entscheiden</h2>
+      </header>
+      <div class="home-benefits__grid">
+        <article class="home-benefit">
+          <h3>Alles in einer Sammlung</h3>
+          <p>Produkte aus verschiedenen Shops an einem Ort erfassen und vergleichen.</p>
+        </article>
+        <article class="home-benefit">
+          <h3>Preise klar priorisieren</h3>
+          <p>Ist-Werte, Wunschpreise und Differenzen sofort sichtbar statt verteilt in Tabs.</p>
+        </article>
+        <article class="home-benefit">
+          <h3>Schnell und lokal nutzbar</h3>
+          <p>Start ohne Einrichtung und ohne Konto, direkt in deinem Browser.</p>
+        </article>
+      </div>
     </section>
 
-    <section class="home-cta" aria-labelledby="home-cta-title">
-      <h2 id="home-cta-title">Starte deine erste Sammlung</h2>
-      <button type="button" class="button button-primary" id="start-first-collection-cta">Jetzt starten</button>
+    <section class="home-note" aria-labelledby="home-note-title">
+      <div class="home-note__inner">
+        <h2 id="home-note-title">In unter einer Minute startklar</h2>
+        <p>Erste Sammlung anlegen, Links hinzufügen und Preise direkt vergleichen.</p>
+        <button type="button" class="button button-primary" id="start-first-collection-cta">Jetzt starten</button>
+      </div>
     </section>
   </main>
   <div id="app-footer"></div>
