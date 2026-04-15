@@ -10,7 +10,6 @@
     var page = document.body ? document.body.getAttribute('data-page') : '';
     var isHome = page === 'home';
     var pagePrefix = isHome ? 'pages/' : '';
-    var contactText = 'Kontakt';
     var versionText = 'Costnest - Beta';
 
     slot.innerHTML = [
@@ -19,7 +18,7 @@
       '    <nav class="app-footer__nav" aria-label="Rechtliche Informationen">',
       '      <a href="' + pagePrefix + 'impressum.html">Impressum</a>',
       '      <a href="' + pagePrefix + 'datenschutz.html">Datenschutz</a>',
-      '      <a href="mailto:kontakt@costnest.de">' + contactText + '</a>',
+      '      <a href="' + pagePrefix + 'agb.html">AGB</a>',
       '    </nav>',
       '    <div class="app-footer__meta">',
       '      <small class="app-footer__version">' + versionText + '</small>',

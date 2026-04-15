@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Costnest | AGB</title>
+  <meta name="description" content="Allgemeine Geschäftsbedingungen für die Nutzung von Costnest.">
+  <script>
+    (function () {
+      var key = 'costnest.theme';
+      var theme = 'light';
+
+      try {
+        var stored = localStorage.getItem(key);
+        if (stored === 'light' || stored === 'dark') {
+          theme = stored;
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          theme = 'dark';
+        }
+      } catch (error) {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          theme = 'dark';
+        }
+      }
+
+      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.style.colorScheme = theme;
+    })();
+  </script>
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body data-page="agb">
+  <a class="skip-link" href="#content">Zum Inhalt springen</a>
+  <div id="app-header"></div>
+
+  <main id="content" class="page page-legal">
+    <section class="card legal-section">
+      <h1>Allgemeine Geschäftsbedingungen (AGB)</h1>
+      <p>Diese AGB regeln die Nutzung der Plattform Costnest durch Nutzerinnen und Nutzer.</p>
+    </section>
+
+    <section class="card legal-section">
+      <h2>1. Anbieter</h2>
+      <p>[Name/Firma eintragen]</p>
+      <p>[Adresse eintragen]</p>
+      <p>E-Mail: [E-Mail eintragen]</p>
+    </section>
+
+    <section class="card legal-section">
+      <h2>2. Leistungsbeschreibung</h2>
+      <p>Costnest ist eine Plattform zur Organisation von Produktlinks, Preisen, Wunschpreisen und Notizen innerhalb von Sammlungen.</p>
+      <p>Der Funktionsumfang kann fortlaufend angepasst, erweitert oder reduziert werden.</p>
+    </section>
+
+    <section class="card legal-section">
+      <h2>3. Nutzung der Plattform</h2>
+      <p>Die Nutzung erfolgt eigenverantwortlich.</p>
+      <p>Nutzerinnen und Nutzer sind dafür verantwortlich, eingegebene Daten regelmäßig zu sichern, wenn dies gewünscht ist.</p>
+    </section>
+
+    <section class="card legal-section">
+      <h2>4. Lokale Speicherung im Browser</h2>
+      <p>Daten werden derzeit lokal im Browser gespeichert (z. B. über localStorage).</p>
+      <p>Eine serverseitige Speicherung der Nutzungsdaten ist aktuell nicht Bestandteil des Angebots.</p>
+      <p>Bei Löschung des Browser-Speichers können Daten verloren gehen.</p>
+    </section>
+
+    <section class="card legal-section">
+      <h2>5. Preise und Verfügbarkeiten</h2>
+      <p>Preisangaben, Verfügbarkeiten und Produktinformationen externer Shops können sich jederzeit ändern.</p>
+      <p>Costnest übernimmt keine Gewähr für Aktualität, Richtigkeit oder Vollständigkeit dieser externen Informationen.</p>
+    </section>
+
+    <section class="card legal-section">
+      <h2>6. Externe Inhalte und Shop-Links</h2>
+      <p>Costnest verweist auf externe Websites und Shops.</p>
+      <p>Für Inhalte, Angebote, Preise und rechtliche Angaben auf externen Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
+    </section>
+
+    <section class="card legal-section">
+      <h2>7. Haftung</h2>
+      <p>Die Nutzung erfolgt auf eigene Verantwortung.</p>
+      <p>Der Anbieter haftet nur im gesetzlich vorgesehenen Rahmen, insbesondere bei Vorsatz und grober Fahrlässigkeit.</p>
+      <p>Für mittelbare Schäden, Datenverluste oder entgangenen Gewinn wird keine Haftung übernommen, soweit gesetzlich zulässig.</p>
+    </section>
+
+    <section class="card legal-section">
+      <h2>8. Zukünftige Erweiterungen (Analytics/Affiliate)</h2>
+      <p>Die Plattform kann künftig um Analytics-Funktionen und Affiliate-Modelle erweitert werden.</p>
+      <p>Bei Einführung solcher Funktionen werden AGB und Datenschutzhinweise entsprechend aktualisiert.</p>
+    </section>
+
+    <section class="card legal-section">
+      <h2>9. Änderungen dieser AGB</h2>
+      <p>Der Anbieter kann diese AGB mit Wirkung für die Zukunft anpassen, wenn sachliche Gründe dies erforderlich machen.</p>
+      <p>Stand: [Datum eintragen]</p>
+    </section>
+  </main>
+  <div id="app-footer"></div>
+
+  <script src="../assets/js/core/namespace.js" defer></script>
+  <script src="../assets/js/ui/header.js" defer></script>
+  <script src="../assets/js/ui/footer.js" defer></script>
+  <script src="../assets/js/ui/toast.js" defer></script>
+  <script src="../assets/js/core/bootstrap.js" defer></script>
+</body>
+</html>
