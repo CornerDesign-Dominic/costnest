@@ -21,8 +21,9 @@
       return;
     }
 
-    var params = new URLSearchParams(global.location.search);
-    var templateId = params.get('templateId');
+    var templateId = Costnest.url && typeof Costnest.url.getTemplateIdFromUrl === 'function'
+      ? Costnest.url.getTemplateIdFromUrl()
+      : String(new URLSearchParams(global.location.search).get('templateId') || '').trim();
     var template = Costnest.templateRepository && typeof Costnest.templateRepository.getById === 'function'
       ? Costnest.templateRepository.getById(templateId)
       : null;
@@ -78,47 +79,43 @@
     }
 
     function renderSuggestions() {
+      var renderer = Costnest.components
+        && Costnest.components.templateSuggestionItem
+        && typeof Costnest.components.templateSuggestionItem.renderTemplateSuggestionItem === 'function'
+        ? Costnest.components.templateSuggestionItem.renderTemplateSuggestionItem
+        : null;
+
       suggestionsListElement.innerHTML = template.suggestions.map(function (suggestion, index) {
-        return [
-          '<article class="card template-suggestion">',
-          '  <label class="template-suggestion__check">',
-          '    <input type="checkbox" data-suggestion-index="' + index + '" checked>',
-          '    <span class="template-suggestion__title">' + escapeHtml(suggestion.title) + '</span>',
-          '  </label>',
-          '  <div class="template-suggestion__meta">',
-          '    <span class="template-suggestion__price">' + Costnest.currency.formatEuro(suggestion.targetPrice) + '</span>',
-          '    <span class="template-suggestion__quantity">x' + suggestion.quantity + '</span>',
-          '  </div>',
-          '</article>'
-        ].join('');
+        if (renderer) {
+          return renderer(suggestion, index);
+        }
+
+        return renderSuggestionFallback(suggestion, index);
       }).join('');
 
       syncConvertButtons();
     }
 
     function convertToCollection() {
-      var collection = Costnest.collectionRepository.create(template.name);
       var selectedSuggestions = template.suggestions.filter(function (_, index) {
         return Boolean(checkedMap[String(index)]);
       });
 
-      selectedSuggestions.forEach(function (suggestion) {
-        Costnest.itemRepository.add(collection.id, {
-          shopLink: '',
-          title: suggestion.title,
-          currentPrice: null,
-          targetPrice: Number(suggestion.targetPrice),
-          quantity: Number(suggestion.quantity),
-          note: '',
-          status: 'planned'
-        });
-      });
+      var result = Costnest.domain
+        && Costnest.domain.templates
+        && typeof Costnest.domain.templates.createCollectionFromTemplate === 'function'
+        ? Costnest.domain.templates.createCollectionFromTemplate(template, selectedSuggestions)
+        : null;
+
+      if (!result || !result.collection) {
+        return;
+      }
 
       if (Costnest.toast && typeof Costnest.toast.flashNextPage === 'function') {
         Costnest.toast.flashNextPage('Sammlung erstellt');
       }
 
-      global.location.href = 'collection-detail.html?collectionId=' + encodeURIComponent(collection.id);
+      global.location.href = 'collection-detail.html?collectionId=' + encodeURIComponent(result.collection.id);
     }
 
     function renderRelatedTemplates() {
@@ -127,17 +124,26 @@
         return;
       }
 
-      var relatedTemplates = Costnest.templateRepository.getRelatedByCategory(template.id, 4).slice(0, 4);
+      var relatedTemplates = Costnest.templateRepository.getRelatedByCategory(template.slug || template.id, 4).slice(0, 4);
       if (!relatedTemplates.length) {
         relatedSection.hidden = true;
         relatedLinksElement.innerHTML = '';
         return;
       }
 
+      var linkRenderer = Costnest.components
+        && Costnest.components.templateRelatedLink
+        && typeof Costnest.components.templateRelatedLink.renderRelatedTemplateLink === 'function'
+        ? Costnest.components.templateRelatedLink.renderRelatedTemplateLink
+        : null;
+
       relatedSection.hidden = false;
       relatedLinksElement.innerHTML = relatedTemplates.slice(0, 4).map(function (entry) {
-        var templateKey = entry.slug || entry.id;
-        return '<a class="template-related__link" href="template-detail.html?templateId=' + encodeURIComponent(templateKey) + '">' + escapeHtml(entry.name) + '</a>';
+        if (linkRenderer) {
+          return linkRenderer(entry);
+        }
+
+        return renderRelatedLinkFallback(entry);
       }).join('');
     }
   }
@@ -183,6 +189,35 @@
     }
 
     return value.trim();
+  }
+
+  function renderSuggestionFallback(suggestion, index) {
+    var safeTitle = escapeHtml(String(suggestion && suggestion.title ? suggestion.title : ''));
+    var safePrice = Number.isFinite(Number(suggestion && suggestion.targetPrice))
+      ? Costnest.currency.formatEuro(Number(suggestion.targetPrice))
+      : '—';
+    var safeQuantity = Number.isFinite(Number(suggestion && suggestion.quantity)) && Number(suggestion.quantity) >= 1
+      ? Math.floor(Number(suggestion.quantity))
+      : 1;
+
+    return [
+      '<article class="card template-suggestion">',
+      '  <label class="template-suggestion__check">',
+      '    <input type="checkbox" data-suggestion-index="' + index + '" checked>',
+      '    <span class="template-suggestion__title">' + safeTitle + '</span>',
+      '  </label>',
+      '  <div class="template-suggestion__meta">',
+      '    <span class="template-suggestion__price">' + safePrice + '</span>',
+      '    <span class="template-suggestion__quantity">x' + safeQuantity + '</span>',
+      '  </div>',
+      '</article>'
+    ].join('');
+  }
+
+  function renderRelatedLinkFallback(template) {
+    var key = encodeURIComponent(String(template && (template.slug || template.id) ? (template.slug || template.id) : ''));
+    var label = escapeHtml(String(template && template.name ? template.name : 'Vorlage'));
+    return '<a class="template-related__link" href="template-detail.html?templateId=' + key + '">' + label + '</a>';
   }
 
   function escapeHtml(value) {
