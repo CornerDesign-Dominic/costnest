@@ -12,6 +12,17 @@
   --color-danger: #DC2626;
   --color-border: #E4E9F2;
 
+  --color-overlay: rgba(17, 31, 60, 0.38);
+  --color-header-bg: rgba(255, 255, 255, 0.88);
+  --color-header-border: rgba(31, 41, 55, 0.08);
+  --color-footer-bg: #EFF2F6;
+  --color-footer-border: #DDE3EE;
+  --color-footer-link: #49566A;
+  --color-footer-meta: #677488;
+
+  --color-text-inverse: #FFFFFF;
+  --color-surface-contrast: #FFFFFF;
+
   --radius-sm: 10px;
   --radius-md: 14px;
   --radius-lg: 18px;
@@ -28,9 +39,43 @@
   --shadow-soft: 0 12px 30px rgba(31, 41, 55, 0.06);
   --shadow-surface: 0 6px 18px rgba(31, 41, 55, 0.05);
   --shadow-focus: 0 0 0 3px rgba(37, 99, 235, 0.24);
+  --shadow-header: 0 4px 18px rgba(31, 41, 55, 0.04);
 
   --header-height: 74px;
   --content-width: 980px;
+
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  --color-bg: #0E131A;
+  --color-surface: #161D27;
+  --color-surface-muted: #1C2430;
+  --color-text: #E5ECF8;
+  --color-text-soft: #9AA8BC;
+  --color-primary: #4F83FF;
+  --color-primary-hover: #6A95FF;
+  --color-success: #38C275;
+  --color-danger: #F06A6A;
+  --color-border: #2A3445;
+
+  --color-overlay: rgba(4, 8, 14, 0.62);
+  --color-header-bg: rgba(18, 24, 33, 0.84);
+  --color-header-border: rgba(148, 163, 184, 0.16);
+  --color-footer-bg: #121922;
+  --color-footer-border: #2A3445;
+  --color-footer-link: #B5C2D4;
+  --color-footer-meta: #8FA0B6;
+
+  --color-text-inverse: #0F1722;
+  --color-surface-contrast: #111722;
+
+  --shadow-soft: 0 16px 36px rgba(0, 0, 0, 0.34);
+  --shadow-surface: 0 10px 24px rgba(0, 0, 0, 0.28);
+  --shadow-focus: 0 0 0 3px rgba(79, 131, 255, 0.34);
+  --shadow-header: 0 8px 24px rgba(0, 0, 0, 0.24);
+
+  color-scheme: dark;
 }
 
 * {
@@ -61,7 +106,7 @@ body {
 
 a {
   color: var(--color-primary);
-  text-decoration-color: rgba(37, 99, 235, 0.35);
+  text-decoration-color: color-mix(in srgb, var(--color-primary) 35%, transparent);
   text-underline-offset: 2px;
 }
 
@@ -110,6 +155,134 @@ h3 {
   overflow: hidden;
 }
 
+/* Global dark-mode harmonization for existing components */
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .modal,
+html[data-theme="dark"] .home-preview-card,
+html[data-theme="dark"] .home-note,
+html[data-theme="dark"] .home-benefit,
+html[data-theme="dark"] .kpi-card,
+html[data-theme="dark"] .price-line,
+html[data-theme="dark"] .collection-item {
+  background: var(--color-surface) !important;
+  border-color: var(--color-border) !important;
+  color: var(--color-text);
+}
+
+html[data-theme="dark"] .metric,
+html[data-theme="dark"] .collection-item__prices,
+html[data-theme="dark"] .filter-card,
+html[data-theme="dark"] .status-badge--planned,
+html[data-theme="dark"] .status-badge--bought,
+html[data-theme="dark"] .item-quantity-badge,
+html[data-theme="dark"] .collection-item__alternatives-toggle,
+html[data-theme="dark"] .icon-button-subtle,
+html[data-theme="dark"] .kpi-card,
+html[data-theme="dark"] .summary-card {
+  background: var(--color-surface-muted) !important;
+  border-color: var(--color-border) !important;
+}
+
+html[data-theme="dark"] .collection-item--bought {
+  background: linear-gradient(0deg, #141C26 0%, #18212D 100%) !important;
+}
+
+html[data-theme="dark"] .button-ghost,
+html[data-theme="dark"] .icon-button,
+html[data-theme="dark"] .modal-close,
+html[data-theme="dark"] .alternative-form input,
+html[data-theme="dark"] .form-field input,
+html[data-theme="dark"] .form-field textarea,
+html[data-theme="dark"] .filter-control input,
+html[data-theme="dark"] .filter-control select {
+  background: var(--color-surface-contrast) !important;
+  border-color: var(--color-border) !important;
+  color: var(--color-text) !important;
+}
+
+html[data-theme="dark"] .button-primary {
+  color: var(--color-text-inverse) !important;
+}
+
+html[data-theme="dark"] .button-ghost,
+html[data-theme="dark"] .icon-button,
+html[data-theme="dark"] .modal-close {
+  color: var(--color-text-soft) !important;
+}
+
+html[data-theme="dark"] .button-ghost:hover,
+html[data-theme="dark"] .icon-button:hover,
+html[data-theme="dark"] .modal-close:hover,
+html[data-theme="dark"] .collection-overview-card__link:hover {
+  background: #202A37 !important;
+  color: var(--color-text) !important;
+}
+
+html[data-theme="dark"] .icon-button-danger,
+html[data-theme="dark"] .collection-item__action-button--danger,
+html[data-theme="dark"] .collection-delete-button {
+  color: #FF8D8D !important;
+  border-color: #5D2A2A !important;
+  background: #2B1A1A !important;
+}
+
+html[data-theme="dark"] .icon-button-danger:hover,
+html[data-theme="dark"] .collection-item__action-button--danger:hover,
+html[data-theme="dark"] .collection-delete-button:hover {
+  background: #3A2020 !important;
+}
+
+html[data-theme="dark"] .field-help,
+html[data-theme="dark"] .filter-card__hint,
+html[data-theme="dark"] .kpi-card__label,
+html[data-theme="dark"] .metric__label,
+html[data-theme="dark"] .price-main__formula,
+html[data-theme="dark"] .price-diff__label,
+html[data-theme="dark"] .home-subline,
+html[data-theme="dark"] .home-preview-card__hint,
+html[data-theme="dark"] .empty-state p,
+html[data-theme="dark"] .collection-item__note,
+html[data-theme="dark"] .collection-item__alternatives-empty,
+html[data-theme="dark"] .collection-overview-card__meta-row span,
+html[data-theme="dark"] .collection-overview-card__price-label,
+html[data-theme="dark"] .app-footer__meta,
+html[data-theme="dark"] .home-trust-list li {
+  color: var(--color-text-soft) !important;
+}
+
+html[data-theme="dark"] .collection-item__domain-link,
+html[data-theme="dark"] .collection-item__alternatives-list a,
+html[data-theme="dark"] .app-footer__nav a {
+  color: #B5C2D4 !important;
+}
+
+html[data-theme="dark"] .collection-item__domain-link:hover,
+html[data-theme="dark"] .collection-item__alternatives-list a:hover,
+html[data-theme="dark"] .app-footer__nav a:hover {
+  color: var(--color-text) !important;
+}
+
+html[data-theme="dark"] .modal-backdrop {
+  background: var(--color-overlay) !important;
+}
+
+html[data-theme="dark"] .app-toast {
+  border-color: #2E5E42 !important;
+  background: #163024 !important;
+  color: #BEEBD0 !important;
+}
+
+html[data-theme="dark"] .app-toast--neutral {
+  border-color: #34445A !important;
+  background: #1A2432 !important;
+  color: #B9C7D8 !important;
+}
+
+html[data-theme="dark"] .empty-state {
+  border-color: #34445A !important;
+  background: #161E2A !important;
+}
+
 @media (max-width: 720px) {
   :root {
     --header-height: 66px;
@@ -119,3 +292,4 @@ h3 {
     font-size: 15px;
   }
 }
+

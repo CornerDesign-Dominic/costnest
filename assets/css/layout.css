@@ -4,10 +4,10 @@
   left: 0;
   right: 0;
   height: var(--header-height);
-  background: rgba(255, 255, 255, 0.88);
+  background: var(--color-header-bg);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(31, 41, 55, 0.08);
-  box-shadow: 0 4px 18px rgba(31, 41, 55, 0.04);
+  border-bottom: 1px solid var(--color-header-border);
+  box-shadow: var(--shadow-header);
   z-index: 1000;
 }
 
@@ -53,13 +53,43 @@
 .nav-link:hover,
 .nav-link:focus-visible {
   color: var(--color-primary);
-  border-bottom-color: rgba(37, 99, 235, 0.35);
+  border-bottom-color: color-mix(in srgb, var(--color-primary) 35%, transparent);
   outline: none;
 }
 
 .nav-link.is-active {
   color: var(--color-primary);
   border-bottom-color: var(--color-primary);
+}
+
+.theme-toggle {
+  min-height: 32px;
+  padding: 0 11px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+  color: var(--color-text-soft);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: border-color 0.18s ease, background-color 0.18s ease, color 0.18s ease;
+}
+
+.theme-toggle:hover {
+  border-color: color-mix(in srgb, var(--color-primary) 42%, var(--color-border));
+  color: var(--color-text);
+}
+
+.theme-toggle[aria-pressed="true"] {
+  border-color: color-mix(in srgb, var(--color-primary) 40%, var(--color-border));
+  background: color-mix(in srgb, var(--color-primary) 12%, var(--color-surface));
+  color: var(--color-primary);
+}
+
+.theme-toggle:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
 }
 
 .page {
@@ -90,13 +120,13 @@
 
 .app-footer {
   margin-top: var(--space-4);
-  border-top: 1px solid #DDE3EE;
-  background: #EFF2F6;
+  border-top: 1px solid var(--color-footer-border);
+  background: var(--color-footer-bg);
 }
 
 body[data-page="collection-detail"] .app-footer {
-  border-top: 1px solid #E3EAF4;
-  background: linear-gradient(180deg, #F3F6FA 0%, #EEF2F7 100%);
+  border-top: 1px solid var(--color-footer-border);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--color-footer-bg) 75%, var(--color-surface) 25%) 0%, var(--color-footer-bg) 100%);
 }
 
 .app-footer__inner {
@@ -122,7 +152,7 @@ body[data-page="collection-detail"] .app-footer__inner {
 
 .app-footer__nav a {
   font-size: 0.84rem;
-  color: #49566A;
+  color: var(--color-footer-link);
   text-decoration: none;
 }
 
@@ -130,7 +160,7 @@ body[data-page="collection-detail"] .app-footer__inner {
 .app-footer__nav a:focus-visible {
   color: var(--color-text);
   text-decoration: underline;
-  text-decoration-color: rgba(31, 41, 55, 0.28);
+  text-decoration-color: color-mix(in srgb, var(--color-text) 28%, transparent);
   text-underline-offset: 2px;
 }
 
@@ -138,7 +168,7 @@ body[data-page="collection-detail"] .app-footer__inner {
   display: inline-flex;
   align-items: center;
   gap: var(--space-3);
-  color: #677488;
+  color: var(--color-footer-meta);
   font-size: 0.78rem;
   white-space: nowrap;
 }
@@ -154,6 +184,12 @@ body[data-page="collection-detail"] .app-footer__inner {
     min-height: 22px;
     padding: 0;
     font-size: 0.9rem;
+  }
+
+  .theme-toggle {
+    min-height: 30px;
+    padding: 0 10px;
+    font-size: 0.75rem;
   }
 
   .app-footer__inner {

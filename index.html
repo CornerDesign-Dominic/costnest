@@ -5,7 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Costnest | Preise im Blick</title>
   <meta name="description" content="Preise und Wunschpreise in Sammlungen klar vergleichen.">
-  <link rel="stylesheet" href="assets/css/base.css">
+  <script>
+    (function () {
+      var key = 'costnest.theme';
+      var theme = 'light';
+
+      try {
+        var stored = localStorage.getItem(key);
+        if (stored === 'light' || stored === 'dark') {
+          theme = stored;
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          theme = 'dark';
+        }
+      } catch (error) {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          theme = 'dark';
+        }
+      }
+
+      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.style.colorScheme = theme;
+    })();
+  </script>
+
+    <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/layout.css">
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/pages.css">
@@ -96,6 +119,8 @@
   <script src="assets/js/core/bootstrap.js" defer></script>
 </body>
 </html>
+
+
 
 
 

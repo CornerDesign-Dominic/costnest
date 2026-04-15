@@ -1,4 +1,4 @@
-.page-home {
+﻿.page-home {
   width: min(1100px, calc(100% - 40px));
   display: grid;
   gap: clamp(26px, 5vw, 54px);
@@ -370,3 +370,4 @@ body[data-page="collection-detail"] .fab {
     height: 56px;
   }
 }
+
