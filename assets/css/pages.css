@@ -1,0 +1,227 @@
+﻿.page-home {
+  display: grid;
+  gap: clamp(40px, 8vw, 88px);
+  padding-top: calc(var(--header-height) + clamp(20px, 3.2vw, 34px));
+  padding-bottom: clamp(34px, 6vw, 64px);
+}
+
+.home-hero {
+  display: grid;
+  justify-items: start;
+  gap: 14px;
+  max-width: 780px;
+  scroll-margin-top: calc(var(--header-height) + 14px);
+}
+
+.home-hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 1.4rem + 2.6vw, 3.9rem);
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+  font-weight: 830;
+  max-width: 14ch;
+}
+
+.home-hero p {
+  margin: 0;
+  font-size: clamp(1rem, 0.92rem + 0.3vw, 1.15rem);
+  line-height: 1.5;
+  max-width: 58ch;
+  color: #5E6B7F;
+}
+
+.home-hero .button {
+  min-height: 46px;
+  padding: 0 20px;
+  border-radius: 12px;
+  font-size: 0.96rem;
+}
+
+.home-hero small {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #7D889A;
+  letter-spacing: 0.01em;
+}
+
+.home-features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2.2vw, 24px);
+  align-items: start;
+}
+
+.home-feature {
+  min-width: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.home-feature h2 {
+  margin: 0;
+  font-size: clamp(1.02rem, 0.95rem + 0.32vw, 1.22rem);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+.home-feature p {
+  margin: 0;
+  font-size: 0.84rem;
+  font-weight: 620;
+  color: #748195;
+}
+
+.home-cta {
+  display: grid;
+  justify-items: start;
+  gap: 12px;
+  padding-top: clamp(4px, 1vw, 10px);
+}
+
+.home-cta h2 {
+  margin: 0;
+  font-size: clamp(1.35rem, 1.18rem + 0.8vw, 1.85rem);
+  letter-spacing: -0.02em;
+}
+
+.home-cta .button {
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 12px;
+}
+.page-head--with-action {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.page-collection-detail #collection-meta {
+  color: var(--color-text-soft);
+}
+
+body[data-page="collection-detail"] .page-collection-detail {
+  width: min(1120px, calc(100% - 40px));
+  padding-top: calc(var(--header-height) + 22px);
+  padding-bottom: 148px;
+}
+
+body[data-page="collection-detail"] .page-head {
+  margin-bottom: 16px;
+}
+
+body[data-page="collection-detail"] .page-head--with-action {
+  align-items: center;
+}
+
+body[data-page="collection-detail"] .page-head h1 {
+  font-size: clamp(1.45rem, 1.18rem + 0.82vw, 1.95rem);
+  margin-bottom: 2px;
+  letter-spacing: -0.01em;
+}
+
+body[data-page="collection-detail"] #collection-meta {
+  font-size: 0.86rem;
+  color: #66758C;
+}
+
+body[data-page="collection-detail"] #export-csv-button {
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 999px;
+}
+
+body[data-page="collection-detail"] .fab {
+  right: 26px;
+  bottom: calc(88px + env(safe-area-inset-bottom, 0px));
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 16px 30px rgba(29, 78, 216, 0.32);
+}
+
+.page-legal {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.legal-section {
+  padding: var(--space-4);
+}
+
+.legal-section h1,
+.legal-section h2 {
+  margin-bottom: var(--space-2);
+}
+
+.legal-section h2 {
+  font-size: 1.05rem;
+}
+
+.legal-section p {
+  color: var(--color-text-soft);
+  max-width: 70ch;
+}
+
+@media (max-width: 720px) {
+  .page-home {
+    gap: 34px;
+    padding-top: calc(var(--header-height) + 16px);
+  }
+
+  .home-hero {
+    gap: 12px;
+  }
+
+  .home-hero h1 {
+    font-size: clamp(1.85rem, 1.45rem + 1.95vw, 2.4rem);
+    max-width: 16ch;
+  }
+
+  .home-features {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .home-feature {
+    gap: 2px;
+  }
+
+  .home-cta .button,
+  .home-hero .button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .page-head--with-action {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-3);
+  }
+
+  body[data-page="collection-detail"] .page-collection-detail {
+    width: calc(100% - 20px);
+    padding-top: calc(var(--header-height) + 18px);
+    padding-bottom: 130px;
+  }
+
+  body[data-page="collection-detail"] .page-head {
+    margin-bottom: 12px;
+  }
+
+  body[data-page="collection-detail"] #export-csv-button {
+    width: fit-content;
+  }
+
+  body[data-page="collection-detail"] .fab {
+    right: 14px;
+    bottom: calc(78px + env(safe-area-inset-bottom, 0px));
+    width: 56px;
+    height: 56px;
+  }
+}
+
+
+
+
+

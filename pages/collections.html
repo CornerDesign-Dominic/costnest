@@ -1,0 +1,69 @@
+﻿<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Costnest | Sammlungen</title>
+  <meta name="description" content="Alle Sammlungen im schnellen Überblick.">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body data-page="collections">
+  <a class="skip-link" href="#content">Zum Inhalt springen</a>
+  <div id="app-header"></div>
+
+  <main id="content" class="page page-collections-overview">
+    <section class="page-head page-head--with-action">
+      <div>
+        <h1>Deine Sammlungen</h1>
+      </div>
+    </section>
+
+    <section class="card empty-state" id="collections-empty-state" hidden>
+      <h2>Keine Sammlungen</h2>
+      <p>Neue Sammlung anlegen.</p>
+    </section>
+
+    <section aria-label="Sammlungsübersicht" class="collection-overview-list" id="collections-overview-list"></section>
+  </main>
+  <div id="app-footer"></div>
+
+  <div class="modal-backdrop" id="delete-collection-modal-backdrop" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="delete-collection-modal-title">
+      <header class="modal-header">
+        <h2 id="delete-collection-modal-title">Sammlung löschen</h2>
+        <button type="button" class="modal-close" id="close-delete-collection-modal" aria-label="Dialog schließen">&times;</button>
+      </header>
+
+      <form id="delete-collection-form" novalidate>
+        <p>Wirklich löschen?</p>
+
+        <div class="modal-actions">
+          <button type="submit" class="button button-primary" id="confirm-delete-collection">Bestätigen</button>
+          <button type="button" class="button button-ghost" id="cancel-delete-collection-modal">Abbrechen</button>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <script src="../assets/js/core/namespace.js" defer></script>
+  <script src="../assets/js/utils/currency.js" defer></script>
+  <script src="../assets/js/utils/validation.js" defer></script>
+  <script src="../assets/js/utils/id.js" defer></script>
+  <script src="../assets/js/storage/local-storage-service.js" defer></script>
+  <script src="../assets/js/data/collection-repository.js" defer></script>
+  <script src="../assets/js/data/item-repository.js" defer></script>
+  <script src="../assets/js/ui/header.js" defer></script>
+  <script src="../assets/js/ui/footer.js" defer></script>
+  <script src="../assets/js/ui/toast.js" defer></script>
+  <script src="../assets/js/ui/modal.js" defer></script>
+  <script src="../assets/js/pages/collections-page.js" defer></script>
+  <script src="../assets/js/core/bootstrap.js" defer></script>
+</body>
+</html>
+
+
+
+

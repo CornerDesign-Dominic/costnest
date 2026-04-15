@@ -1,0 +1,166 @@
+﻿<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Costnest | Sammlungsdetails</title>
+  <meta name="description" content="Einträge und Summen in einer Sammlung.">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body data-page="collection-detail">
+  <a class="skip-link" href="#content">Zum Inhalt springen</a>
+  <div id="app-header"></div>
+
+  <main id="content" class="page page-collection-detail">
+    <section class="page-head page-head--with-action">
+      <div>
+        <div class="collection-title-row">
+          <h1 id="collection-title">Sammlung</h1>
+          <button type="button" class="collection-edit-hint collection-edit-hint--buttonless" id="edit-collection-title" aria-label="Titel bearbeiten" title="Titel bearbeiten">✎</button>
+        </div>
+        <p id="collection-meta"></p>
+      </div>
+      <button type="button" class="button button-ghost" id="export-csv-button">Export</button>
+    </section>
+
+    <section class="card summary-card" id="collection-summary-card" aria-label="Gesamtübersicht"></section>
+
+    <section class="card empty-state" id="collection-not-found" hidden>
+      <h2>Sammlung nicht gefunden</h2>
+      <p>Nicht verfügbar.</p>
+      <a class="button button-primary" href="collections.html">Zurück</a>
+    </section>
+
+    <section class="card filter-card" id="item-filter-card" aria-label="Filter und Sortierung">
+      <div class="filter-control filter-control--search">
+        <input id="search-filter" name="searchFilter" type="search" placeholder="Suchen" autocomplete="off" aria-label="Suche">
+      </div>
+      <div class="filter-card__row">
+        <div class="filter-control filter-control--checkbox">
+          <label for="hide-bought-toggle">
+            <input id="hide-bought-toggle" name="hideBought" type="checkbox">
+            Erledigte ausblenden
+          </label>
+        </div>
+
+        <div class="filter-control filter-control--sort-inline">
+          <label for="sort-filter">Sortieren</label>
+          <select id="sort-filter" name="sortFilter">
+            <option value="newest">Neueste</option>
+            <option value="oldest">Älteste zuerst</option>
+            <option value="current-desc">Preis absteigend</option>
+            <option value="current-asc">Preis aufsteigend</option>
+            <option value="diff-desc">Differenz absteigend</option>
+            <option value="diff-asc">Differenz aufsteigend</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section class="card empty-state empty-state--clickable" id="collection-empty-state" hidden>
+      <h2>Noch nichts hier</h2>
+      <p>+ hinzufügen</p>
+    </section>
+
+    <section class="card empty-state" id="collection-filter-empty-state" hidden>
+      <h2>Keine Treffer</h2>
+      <p>Filter anpassen.</p>
+    </section>
+
+    <section aria-label="Eintragsliste" class="collection-list" id="collection-item-list"></section>
+  </main>
+  <div id="app-footer"></div>
+
+  <button class="fab" type="button" id="open-entry-modal" aria-label="Neuen Eintrag hinzufügen" title="Eintrag hinzufügen">+</button>
+
+  <div class="modal-backdrop" id="entry-modal-backdrop" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="entry-modal-title">
+      <header class="modal-header">
+        <h2 id="entry-modal-title">Eintrag</h2>
+        <button type="button" class="modal-close" id="close-entry-modal" aria-label="Dialog schließen">&times;</button>
+      </header>
+
+      <form id="entry-form" novalidate>
+        <div class="form-field">
+          <label for="shop-link">Link</label>
+          <input id="shop-link" name="shopLink" type="url" placeholder="https://...">
+          <p class="field-error" id="shop-link-error" aria-live="polite"></p>
+        </div>
+
+        <div class="form-field">
+          <label for="item-title">Titel</label>
+          <input id="item-title" name="itemTitle" type="text">
+        </div>
+
+        <div class="form-field">
+          <label for="current-price">Shop-Preis</label>
+          <input id="current-price" name="currentPrice" type="text" inputmode="decimal" placeholder="z. B. 50">
+          <p class="field-error" id="current-price-error" aria-live="polite"></p>
+        </div>
+
+        <div class="form-field">
+          <label for="target-price">Wunsch-Preis</label>
+          <input id="target-price" name="targetPrice" type="text" inputmode="decimal" placeholder="z. B. 40">
+          <p class="field-error" id="target-price-error" aria-live="polite"></p>
+        </div>
+
+        <div class="form-field">
+          <label for="item-quantity">Anzahl</label>
+          <input id="item-quantity" name="itemQuantity" type="number" min="1" step="1" value="1">
+          <p class="field-error" id="quantity-error" aria-live="polite"></p>
+        </div>
+
+        <div class="form-field">
+          <label for="item-note">Notiz</label>
+          <textarea id="item-note" name="itemNote" rows="2"></textarea>
+        </div>
+
+        <div class="modal-actions">
+          <button type="submit" class="button button-primary" id="entry-submit-button">Speichern</button>
+          <button type="button" class="button button-ghost" id="cancel-entry-modal">Abbrechen</button>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <div class="modal-backdrop" id="delete-item-modal-backdrop" hidden>
+    <section class="modal modal--compact" role="dialog" aria-modal="true" aria-labelledby="delete-item-modal-title">
+      <header class="modal-header">
+        <h2 id="delete-item-modal-title">Eintrag löschen</h2>
+        <button type="button" class="modal-close" id="close-delete-item-modal" aria-label="Dialog schließen">&times;</button>
+      </header>
+
+      <form id="delete-item-form" novalidate>
+        <p>Wirklich löschen?</p>
+
+        <div class="modal-actions">
+          <button type="submit" class="button button-primary" id="confirm-delete-item">Bestätigen</button>
+          <button type="button" class="button button-ghost" id="cancel-delete-item-modal">Abbrechen</button>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <script src="../assets/js/core/namespace.js" defer></script>
+  <script src="../assets/js/utils/currency.js" defer></script>
+  <script src="../assets/js/utils/item-view.js" defer></script>
+  <script src="../assets/js/utils/validation.js" defer></script>
+  <script src="../assets/js/utils/id.js" defer></script>
+  <script src="../assets/js/storage/local-storage-service.js" defer></script>
+  <script src="../assets/js/data/collection-repository.js" defer></script>
+  <script src="../assets/js/data/item-repository.js" defer></script>
+  <script src="../assets/js/ui/header.js" defer></script>
+  <script src="../assets/js/ui/footer.js" defer></script>
+  <script src="../assets/js/ui/toast.js" defer></script>
+  <script src="../assets/js/ui/modal.js" defer></script>
+  <script src="../assets/js/pages/collection-detail-page.js" defer></script>
+  <script src="../assets/js/core/bootstrap.js" defer></script>
+</body>
+</html>
+
+
+
+

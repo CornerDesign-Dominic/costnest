@@ -1,0 +1,143 @@
+﻿ðŸ“„ Gesamtbeschreibung des Projekts (Endziel)
+1. ðŸ§­ Grundidee & Zweck
+
+Costnest ist eine webbasierte Anwendung zur strukturierten Planung und Kontrolle von projektbezogenen EinkÃ¤ufen.
+
+Nutzer kÃ¶nnen fÃ¼r beliebige Vorhaben (z. B. PC-Build, Renovierung, Gartenprojekt) Produkte aus beliebigen Online-Shops sammeln, Preise verwalten und diese mit individuellen Zielpreisen vergleichen.
+
+Ziel ist es, transparente Kostenkontrolle, bessere Kaufentscheidungen und gezielte Einsparungen zu ermÃ¶glichen.
+
+2. ðŸŽ¯ Zielgruppe
+
+PrimÃ¤re Nutzergruppen:
+
+Privatpersonen mit konkreten Projekten
+(z. B. Renovierung, Einrichtung, Technik)
+DIY- und Heimwerker
+Technik-Interessierte (z. B. PC-Builder)
+preisbewusste KÃ¤ufer
+Planer mit Budgetfokus
+
+SekundÃ¤r:
+
+kleine SelbststÃ¤ndige / Nebenprojekte
+Haushaltsplaner mit projektbezogenem Fokus
+3. ðŸ§± KernfunktionalitÃ¤t
+Projektstruktur
+Erstellung mehrerer Projekte
+Jedes Projekt enthÃ¤lt:
+Titel
+optionales Budget
+Liste von Positionen
+EintrÃ¤ge (Items)
+
+Pro Eintrag:
+
+Produktname
+URL (Shop-Link)
+aktueller Preis
+Wunschpreis (Zielpreis)
+Shop / Anbieter
+Notizen
+Status (geplant / gekauft)
+Berechnungen & Ãœbersicht
+
+Automatisch berechnet:
+
+Gesamtkosten (aktueller Preis)
+Gesamtkosten (Zielpreise)
+Differenz (Einsparpotenzial)
+Budgetabweichung
+
+ðŸ‘‰ Fokus: sofort sichtbare Entscheidungsgrundlage
+
+4. ðŸ“Š Erweiterte Funktionen (Endzustand)
+Preislogik
+Preisverlauf pro Produkt
+Preisalarme bei Zielpreis
+manuelle oder automatische Updates
+Projektmanagement
+mehrere parallele Projekte
+Kategorien innerhalb von Projekten
+Priorisierung von KÃ¤ufen
+Kollaboration
+Projekte teilen
+gemeinsam bearbeiten (optional spÃ¤ter)
+Datenexport
+CSV / PDF Export
+ProjektÃ¼bersichten fÃ¼r externe Nutzung
+5. ðŸ”— Integrationen & Erweiterungen
+Shop-Integration (spÃ¤ter)
+Erkennung von Shops aus URL
+automatische Produktdaten (teilweise)
+Affiliate-Links
+Preisvergleich
+alternative Anbieter vorschlagen
+gÃ¼nstigere Optionen anzeigen
+Browser-Integration (optional)
+â€žAdd to Costnestâ€œ-Button beim Surfen
+6. ðŸ’° Monetarisierungsmodell
+Freemium-Struktur
+Kostenlos:
+eingeschrÃ¤nkte Nutzung (z. B. 1 Projekt)
+grundlegende Funktionen
+lokale Speicherung
+Premium:
+unbegrenzte Projekte
+Cloud-Synchronisation
+Preisalarme
+Verlauf & Analysen
+Exportfunktionen
+ZusÃ¤tzliche Einnahmequellen:
+Affiliate-Links bei ProduktvorschlÃ¤gen
+ggf. einmalige Lifetime-Option
+7. ðŸ§  Nutzenversprechen (Value Proposition)
+
+Costnest hilft Nutzern:
+
+Projekte finanziell realistisch zu planen
+unnÃ¶tige Ausgaben zu vermeiden
+gezielt auf bessere Preise zu warten
+komplexe Einkaufslisten Ã¼bersichtlich zu verwalten
+8. ðŸ–¥ï¸ Plattform & Technologie
+Plattform:
+Web-App (Desktop-first, mobil nutzbar)
+Speicherung:
+lokal (Gastmodus)
+Cloud (registrierte Nutzer)
+Technischer Rahmen:
+leichtgewichtige Architektur
+skalierbar fÃ¼r spÃ¤tere Erweiterungen
+API-basierte Erweiterbarkeit
+9. ðŸ§© Abgrenzung zu bestehenden LÃ¶sungen
+
+Im Gegensatz zu klassischen:
+
+Wunschlisten
+Preisalarm-Tools
+Budget-Apps
+
+liegt der Fokus auf:
+
+ðŸ‘‰ projektbezogener Kostenplanung mit Zielpreisen
+
+nicht auf:
+
+spontanen KÃ¤ufen
+allgemeinen Merklisten
+10. ðŸš€ Langfristige Vision
+
+Costnest entwickelt sich zu einer zentralen Plattform fÃ¼r:
+
+planbare Kaufentscheidungen
+strukturierte Projektumsetzung
+datenbasierte Preisoptimierung
+
+mit mÃ¶glichen Erweiterungen in Richtung:
+
+intelligente Kaufempfehlungen
+automatische Preisanalyse
+projektspezifische Einkaufsstrategien
+11. ðŸ§¾ Kurzform (Pitch)
+
+Costnest ist eine Web-App, mit der Nutzer ihre Projekte planen, Produkte aus beliebigen Shops sammeln und Preise mit individuellen Zielwerten vergleichen kÃ¶nnen, um fundierte Kaufentscheidungen zu treffen und Kosten zu optimieren.
