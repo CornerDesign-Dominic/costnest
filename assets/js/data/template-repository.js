@@ -195,6 +195,7 @@
 
     var resolvedId = legacyTemplateIdMap[templateId] || templateId;
     var found = null;
+    var foundCategory = null;
 
     categories.some(function (category) {
       var template = category.templates.find(function (entry) {
@@ -206,10 +207,18 @@
       }
 
       found = template;
+      foundCategory = category;
       return true;
     });
 
-    return found ? cloneTemplate(found) : null;
+    if (!found) {
+      return null;
+    }
+
+    var clonedTemplate = cloneTemplate(found);
+    clonedTemplate.categoryId = foundCategory ? foundCategory.id : '';
+    clonedTemplate.categoryName = foundCategory ? foundCategory.name : '';
+    return clonedTemplate;
   }
 
   function cloneCategory(category) {

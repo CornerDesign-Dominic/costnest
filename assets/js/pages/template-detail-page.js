@@ -8,13 +8,14 @@
 
     var notFoundElement = document.getElementById('template-not-found');
     var contentElement = document.getElementById('template-detail-content');
+    var categoryElement = document.getElementById('template-category');
     var titleElement = document.getElementById('template-title');
     var introElement = document.getElementById('template-intro');
     var suggestionsListElement = document.getElementById('template-suggestions-list');
     var topConvertButton = document.getElementById('convert-template-top');
     var bottomConvertButton = document.getElementById('convert-template-bottom');
 
-    if (!notFoundElement || !contentElement || !titleElement || !introElement || !suggestionsListElement || !topConvertButton || !bottomConvertButton) {
+    if (!notFoundElement || !contentElement || !categoryElement || !titleElement || !introElement || !suggestionsListElement || !topConvertButton || !bottomConvertButton) {
       return;
     }
 
@@ -32,6 +33,7 @@
 
     contentElement.hidden = false;
     notFoundElement.hidden = true;
+    categoryElement.textContent = 'Oberkategorie: ' + (template.categoryName || '-');
     titleElement.textContent = template.name;
     introElement.textContent = template.intro;
 
