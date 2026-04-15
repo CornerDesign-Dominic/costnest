@@ -1,0 +1,73 @@
+﻿<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Costnest | Vorlagen</title>
+  <meta name="description" content="Vorlagen für typische Vorhaben als schneller Einstieg in neue Sammlungen.">
+  <script>
+    (function () {
+      var key = 'costnest.theme';
+      var theme = 'light';
+
+      try {
+        var stored = localStorage.getItem(key);
+        if (stored === 'light' || stored === 'dark') {
+          theme = stored;
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          theme = 'dark';
+        }
+      } catch (error) {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          theme = 'dark';
+        }
+      }
+
+      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.style.colorScheme = theme;
+    })();
+  </script>
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body data-page="templates">
+  <a class="skip-link" href="#content">Zum Inhalt springen</a>
+  <div id="app-header"></div>
+
+  <main id="content" class="page page-templates">
+    <section class="page-head">
+      <h1>Vorlagen</h1>
+      <p>Starte schneller mit vorbereiteten Vorlagen für typische Vorhaben.</p>
+    </section>
+
+    <section class="template-grid" aria-label="Vorlagenübersicht">
+      <article class="card template-card" aria-label="Vorlage Büromaterial">
+        <h2>Büromaterial</h2>
+        <p>Hefte, Stifte, Papier und weitere wiederkehrende Einkäufe geordnet sammeln.</p>
+        <small>Bald verfügbar</small>
+      </article>
+
+      <article class="card template-card" aria-label="Vorlage Geburtstag">
+        <h2>Geburtstag</h2>
+        <p>Deko, Snacks, Getränke und Besorgungen für eine Feier an einem Ort planen.</p>
+        <small>Bald verfügbar</small>
+      </article>
+
+      <article class="card template-card" aria-label="Vorlage Urlaub">
+        <h2>Urlaub</h2>
+        <p>Packliste, Reisebedarf und wiederkehrende Reisekäufe strukturiert vorbereiten.</p>
+        <small>Bald verfügbar</small>
+      </article>
+    </section>
+  </main>
+  <div id="app-footer"></div>
+
+  <script src="../assets/js/core/namespace.js" defer></script>
+  <script src="../assets/js/ui/header.js" defer></script>
+  <script src="../assets/js/ui/footer.js" defer></script>
+  <script src="../assets/js/ui/toast.js" defer></script>
+  <script src="../assets/js/core/bootstrap.js" defer></script>
+</body>
+</html>

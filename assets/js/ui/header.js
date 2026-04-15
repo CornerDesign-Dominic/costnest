@@ -96,9 +96,11 @@
     var page = document.body ? document.body.getAttribute('data-page') : '';
     var isHome = page === 'home';
     var isCollectionsArea = page === 'collections' || page === 'collection-detail';
+    var isTemplatesPage = page === 'templates';
 
     var homeHref = isHome ? 'index.html' : '../index.html';
     var collectionsHref = isHome ? 'pages/collections.html' : 'collections.html';
+    var templatesHref = isHome ? 'pages/templates.html' : 'templates.html';
 
     slot.innerHTML = [
       '<header class="app-header" role="banner">',
@@ -107,6 +109,7 @@
       '    <nav aria-label="Hauptnavigation">',
       '      <ul class="nav-list">',
       '        <li><a class="nav-link ' + (isCollectionsArea ? 'is-active' : '') + '" href="' + collectionsHref + '">Sammlungen</a></li>',
+      '        <li><a class="nav-link ' + (isTemplatesPage ? 'is-active' : '') + '" href="' + templatesHref + '">Vorlagen</a></li>',
       '      </ul>',
       '    </nav>',
       '    <button type="button" class="theme-toggle" id="theme-toggle" aria-live="polite">Hell</button>',
