@@ -48,32 +48,32 @@
 }
 
 html[data-theme="dark"] {
-  --color-bg: #0B0F14;
-  --color-surface: #161C23;
-  --color-surface-muted: #1C2430;
-  --color-text: #E6EDF6;
-  --color-text-soft: #9FB0C6;
+  --color-bg: #070B11;
+  --color-surface: #1A2330;
+  --color-surface-muted: #232E3D;
+  --color-text: #F1F6FF;
+  --color-text-soft: #B7C4D7;
   --color-primary: #4F83FF;
   --color-primary-hover: #6A95FF;
   --color-success: #38C275;
   --color-danger: #F06A6A;
-  --color-border: #2A3442;
+  --color-border: #3A4658;
 
-  --color-overlay: rgba(4, 8, 14, 0.62);
-  --color-header-bg: rgba(18, 24, 33, 0.84);
-  --color-header-border: rgba(148, 163, 184, 0.16);
-  --color-footer-bg: #121922;
-  --color-footer-border: #2A3445;
-  --color-footer-link: #B5C2D4;
-  --color-footer-meta: #8FA0B6;
+  --color-overlay: rgba(3, 7, 12, 0.68);
+  --color-header-bg: rgba(16, 23, 34, 0.9);
+  --color-header-border: rgba(173, 189, 211, 0.22);
+  --color-footer-bg: #121B28;
+  --color-footer-border: #354258;
+  --color-footer-link: #C1CEE0;
+  --color-footer-meta: #9FB0C8;
 
-  --color-text-inverse: #0F1722;
-  --color-surface-contrast: #111722;
+  --color-text-inverse: #0E1722;
+  --color-surface-contrast: #202B39;
 
-  --shadow-soft: 0 16px 36px rgba(0, 0, 0, 0.34);
-  --shadow-surface: 0 8px 24px rgba(0, 0, 0, 0.35);
-  --shadow-focus: 0 0 0 3px rgba(79, 131, 255, 0.34);
-  --shadow-header: 0 8px 24px rgba(0, 0, 0, 0.24);
+  --shadow-soft: 0 20px 46px rgba(0, 0, 0, 0.46);
+  --shadow-surface: 0 12px 30px rgba(0, 0, 0, 0.44);
+  --shadow-focus: 0 0 0 3px rgba(79, 131, 255, 0.44);
+  --shadow-header: 0 10px 30px rgba(0, 0, 0, 0.34);
 
   color-scheme: dark;
 }
@@ -184,7 +184,7 @@ html[data-theme="dark"] .summary-card {
 }
 
 html[data-theme="dark"] .collection-item--bought {
-  background: linear-gradient(0deg, #141C26 0%, #18212D 100%) !important;
+  background: linear-gradient(0deg, #1A2533 0%, #212E3F 100%) !important;
 }
 
 html[data-theme="dark"] .button-ghost,
@@ -214,16 +214,16 @@ html[data-theme="dark"] .button-ghost:hover,
 html[data-theme="dark"] .icon-button:hover,
 html[data-theme="dark"] .modal-close:hover,
 html[data-theme="dark"] .collection-overview-card__link:hover {
-  background: #202A37 !important;
+  background: #2A374A !important;
   color: var(--color-text) !important;
 }
 
 html[data-theme="dark"] .icon-button-danger,
 html[data-theme="dark"] .collection-item__action-button--danger,
 html[data-theme="dark"] .collection-delete-button {
-  color: #FF8D8D !important;
-  border-color: #5D2A2A !important;
-  background: #2B1A1A !important;
+  color: #FF9E9E !important;
+  border-color: #6A3232 !important;
+  background: #342020 !important;
 }
 
 html[data-theme="dark"] .icon-button-danger:hover,
