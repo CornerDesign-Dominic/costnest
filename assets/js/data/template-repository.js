@@ -10,9 +10,12 @@
       templates: [
         {
           id: 'geburtstagsfeier',
+          slug: 'geburtstagsfeier',
           name: 'Geburtstagsfeier',
           description: 'Alles Wichtige fuer eine entspannte Feier.',
           intro: 'Waehle aus, was du fuer den Geburtstag direkt uebernehmen willst.',
+          seoTitle: 'Vorlage Geburtstagsfeier | Costnest',
+          seoDescription: 'Plane deine Geburtstagsfeier mit einer klaren Vorlage fuer typische Einkaeufe und ueberfuehre sie direkt in eine Sammlung.',
           suggestions: [
             { title: 'Luftballons (30er Pack)', targetPrice: 6.50, quantity: 1 },
             { title: 'Girlande', targetPrice: 7.90, quantity: 1 },
@@ -23,9 +26,12 @@
         },
         {
           id: 'silvester',
+          slug: 'silvester',
           name: 'Silvester',
           description: 'Getraenke, Deko und Basics fuer den Jahreswechsel.',
           intro: 'Aktiviere die Vorschlaege, die fuer deine Silvesterplanung passen.',
+          seoTitle: 'Vorlage Silvester | Costnest',
+          seoDescription: 'Nutze die Silvester-Vorlage, um typische Einkaeufe strukturiert zu sammeln und als Sammlung weiterzuverwenden.',
           suggestions: [
             { title: 'Sektglaeser (Einweg, 20 Stueck)', targetPrice: 5.90, quantity: 1 },
             { title: 'Konfetti', targetPrice: 3.50, quantity: 2 },
@@ -36,9 +42,12 @@
         },
         {
           id: 'weihnachten',
+          slug: 'weihnachten',
           name: 'Weihnachten',
           description: 'Typische Besorgungen fuer ruhige Feiertage.',
           intro: 'Setze nur die Punkte auf aktiv, die du in deine Weihnachtsliste uebernehmen willst.',
+          seoTitle: 'Vorlage Weihnachten | Costnest',
+          seoDescription: 'Erstelle mit der Weihnachts-Vorlage eine geordnete Einkaufssammlung fuer die Feiertage und behalte Kosten im Blick.',
           suggestions: [
             { title: 'Lichterkette', targetPrice: 19.90, quantity: 1 },
             { title: 'Geschenkpapier', targetPrice: 4.50, quantity: 2 },
@@ -57,9 +66,12 @@
       templates: [
         {
           id: 'zelten',
+          slug: 'urlaub-zelten',
           name: 'Zelten',
           description: 'Basis-Ausstattung fuer den Campingtrip.',
           intro: 'Waehle die Teile, die in deine Camping-Sammlung sollen.',
+          seoTitle: 'Vorlage Urlaub Zelten | Costnest',
+          seoDescription: 'Plane deinen Campingurlaub mit einer Vorlage fuer wichtige Ausruestung und uebernimm sie mit einem Klick als Sammlung.',
           suggestions: [
             { title: '2-Personen Zelt', targetPrice: 119.00, quantity: 1 },
             { title: 'Isomatte', targetPrice: 34.90, quantity: 2 },
@@ -70,9 +82,12 @@
         },
         {
           id: 'schiffsreise',
+          slug: 'urlaub-schiffsreise',
           name: 'Schiffsreise',
           description: 'Wichtige Reiseartikel fuer Tage an Bord.',
           intro: 'Markiere die Vorschlaege, die du fuer die Schiffsreise brauchst.',
+          seoTitle: 'Vorlage Urlaub Schiffsreise | Costnest',
+          seoDescription: 'Nutze eine geordnete Schiffsreise-Vorlage fuer Reiseeinkaeufe und verwandle sie direkt in eine bearbeitbare Sammlung.',
           suggestions: [
             { title: 'Sonnencreme SPF 50', targetPrice: 11.90, quantity: 2 },
             { title: 'Koffer (M)', targetPrice: 89.00, quantity: 1 },
@@ -83,9 +98,12 @@
         },
         {
           id: 'staedtetrip',
+          slug: 'urlaub-staedtetrip',
           name: 'Staedtetrip',
           description: 'Kompakte Liste fuer kurze Reisen.',
           intro: 'Nimm nur mit, was fuer deinen Staedtetrip wirklich relevant ist.',
+          seoTitle: 'Vorlage Urlaub Staedtetrip | Costnest',
+          seoDescription: 'Behalte beim Staedtetrip den Ueberblick: Vorlage auswaehlen, Einkaeufe ordnen und als Sammlung weiterverwenden.',
           suggestions: [
             { title: 'Tagesrucksack', targetPrice: 39.90, quantity: 1 },
             { title: 'Powerbank', targetPrice: 24.90, quantity: 1 },
@@ -104,9 +122,12 @@
       templates: [
         {
           id: 'bueromaterial',
+          slug: 'bueromaterial',
           name: 'Bueromaterial',
           description: 'Die wichtigsten Basics fuer den Arbeitsalltag.',
           intro: 'Aktiviere die Vorschlaege, die du in deine Material-Sammlung uebernehmen willst.',
+          seoTitle: 'Vorlage Bueromaterial | Costnest',
+          seoDescription: 'Ordne Bueroeinkaeufe mit der Vorlage Bueromaterial und erstelle daraus schnell eine wiederverwendbare Sammlung.',
           suggestions: [
             { title: 'Druckerpapier A4 (500 Blatt)', targetPrice: 5.90, quantity: 2 },
             { title: 'Kugelschreiber (10er Set)', targetPrice: 8.50, quantity: 1 },
@@ -117,9 +138,12 @@
         },
         {
           id: 'homeoffice',
+          slug: 'homeoffice',
           name: 'Homeoffice',
           description: 'Praktische Ausstattung fuer konzentriertes Arbeiten zu Hause.',
           intro: 'Waehle die Punkte aus, die du fuer dein Homeoffice einplanen willst.',
+          seoTitle: 'Vorlage Homeoffice | Costnest',
+          seoDescription: 'Die Homeoffice-Vorlage hilft dir, Arbeitsmaterial geordnet zu sammeln und geplante Ausgaben im Blick zu behalten.',
           suggestions: [
             { title: 'Monitorstaender', targetPrice: 34.90, quantity: 1 },
             { title: 'Externe Tastatur', targetPrice: 39.90, quantity: 1 },
@@ -138,9 +162,12 @@
       templates: [
         {
           id: 'schulbeginn',
+          slug: 'schulbeginn',
           name: 'Schulbeginn',
           description: 'Grundausstattung fuer den Start ins Schuljahr.',
           intro: 'Setze die Vorschlaege auf aktiv, die du direkt uebernehmen willst.',
+          seoTitle: 'Vorlage Schulbeginn | Costnest',
+          seoDescription: 'Starte organisiert ins Schuljahr: mit der Vorlage Schulbeginn fuer wichtige Besorgungen und klare Kostenuebersicht.',
           suggestions: [
             { title: 'Schulhefte (A4 kariert)', targetPrice: 1.20, quantity: 8 },
             { title: 'Federmappe', targetPrice: 14.90, quantity: 1 },
@@ -151,9 +178,12 @@
         },
         {
           id: 'klassenfahrt',
+          slug: 'klassenfahrt',
           name: 'Klassenfahrt',
           description: 'Packliste und Besorgungen fuer mehrtaegige Fahrten.',
           intro: 'Waehle die Punkte aus, die fuer die Klassenfahrt relevant sind.',
+          seoTitle: 'Vorlage Klassenfahrt | Costnest',
+          seoDescription: 'Plane eine Klassenfahrt mit einer kompakten Vorlage fuer Packliste und typische Einkaeufe.',
           suggestions: [
             { title: 'Reisetasche', targetPrice: 49.90, quantity: 1 },
             { title: 'Regenjacke', targetPrice: 39.90, quantity: 1 },
@@ -181,7 +211,7 @@
 
     categories.forEach(function (category) {
       category.templates.forEach(function (template) {
-        flatTemplates.push(cloneTemplate(template));
+        flatTemplates.push(attachCategoryMeta(template, category));
       });
     });
 
@@ -193,31 +223,74 @@
       return null;
     }
 
-    var resolvedId = legacyTemplateIdMap[templateId] || templateId;
-    var found = null;
-    var foundCategory = null;
+    var resolvedId = resolveTemplateKey(templateId);
+    var found = findTemplateAndCategory(resolvedId);
+
+    if (!found) {
+      return null;
+    }
+
+    return attachCategoryMeta(found.template, found.category);
+  }
+
+  function getRelatedByCategory(templateId, maxCount) {
+    var resolvedId = resolveTemplateKey(templateId);
+    var found = findTemplateAndCategory(resolvedId);
+    if (!found) {
+      return [];
+    }
+
+    var limit = Number.isFinite(maxCount) && maxCount > 0 ? Math.floor(maxCount) : 3;
+
+    return found.category.templates
+      .filter(function (template) {
+        return template.id !== found.template.id;
+      })
+      .slice(0, limit)
+      .map(function (template) {
+        return attachCategoryMeta(template, found.category);
+      });
+  }
+
+  function resolveTemplateKey(rawKey) {
+    var key = String(rawKey || '').trim();
+    if (!key) {
+      return '';
+    }
+
+    return legacyTemplateIdMap[key] || key;
+  }
+
+  function findTemplateAndCategory(resolvedKey) {
+    if (!resolvedKey) {
+      return null;
+    }
+
+    var result = null;
 
     categories.some(function (category) {
       var template = category.templates.find(function (entry) {
-        return entry.id === resolvedId;
+        return entry.id === resolvedKey || entry.slug === resolvedKey;
       });
 
       if (!template) {
         return false;
       }
 
-      found = template;
-      foundCategory = category;
+      result = {
+        category: category,
+        template: template
+      };
       return true;
     });
 
-    if (!found) {
-      return null;
-    }
+    return result;
+  }
 
-    var clonedTemplate = cloneTemplate(found);
-    clonedTemplate.categoryId = foundCategory ? foundCategory.id : '';
-    clonedTemplate.categoryName = foundCategory ? foundCategory.name : '';
+  function attachCategoryMeta(template, category) {
+    var clonedTemplate = cloneTemplate(template);
+    clonedTemplate.categoryId = category ? category.id : '';
+    clonedTemplate.categoryName = category ? category.name : '';
     return clonedTemplate;
   }
 
@@ -232,6 +305,7 @@
   Costnest.templateRepository = {
     getCategories: getCategories,
     getAll: getAll,
-    getById: getById
+    getById: getById,
+    getRelatedByCategory: getRelatedByCategory
   };
 })(window);

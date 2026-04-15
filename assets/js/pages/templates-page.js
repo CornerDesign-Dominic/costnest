@@ -151,8 +151,9 @@
 
     function renderTemplateCard(template) {
       var suggestionCount = Array.isArray(template.suggestions) ? template.suggestions.length : 0;
+      var templateKey = template.slug || template.id;
       return [
-        '<a class="template-card template-card--link" href="template-detail.html?templateId=' + encodeURIComponent(template.id) + '">',
+        '<a class="template-card template-card--link" href="template-detail.html?templateId=' + encodeURIComponent(templateKey) + '">',
         '  <h3>' + escapeHtml(template.name) + '</h3>',
         '  <p>' + escapeHtml(template.description) + '</p>',
         '  <small>' + suggestionCount + ' Vorschlaege</small>',

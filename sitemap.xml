@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://costnest.de/</loc>
+  </url>
+  <url>
+    <loc>https://costnest.de/pages/collections.html</loc>
+  </url>
+  <url>
+    <loc>https://costnest.de/pages/templates.html</loc>
+  </url>
+  <url>
+    <loc>https://costnest.de/pages/template-detail.html</loc>
+  </url>
+  <!-- Die Vorlagen-Detailseite ist aktuell parameterbasiert (templateId). Einzelne statische Detail-URLs folgen ggf. spaeter. -->
+</urlset>

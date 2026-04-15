@@ -389,6 +389,19 @@ body[data-page="collection-detail"] .fab {
   gap: clamp(12px, 2vw, 20px);
 }
 
+.templates-intro {
+  display: grid;
+  gap: 8px;
+  padding: 14px;
+}
+
+.templates-intro p {
+  margin: 0;
+  color: var(--color-text-soft);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
 .templates-controls {
   display: grid;
   gap: 12px;
@@ -698,6 +711,47 @@ body[data-page="collection-detail"] .fab {
   margin-top: 4px;
   display: flex;
   justify-content: flex-end;
+}
+
+.template-related {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+}
+
+.template-related h2 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.template-related nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.template-related__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 10px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-soft);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 620;
+}
+
+.template-related__link:hover {
+  border-color: var(--color-border-strong);
+  color: var(--color-text);
+}
+
+.template-related__link:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-focus-ring) 30%, transparent);
 }
 
 .legal-section {
