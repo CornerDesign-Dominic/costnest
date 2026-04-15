@@ -128,6 +128,8 @@
       var isExpanded = state.query ? true : Boolean(state.expandedByCategory[category.id]);
       var bodyId = 'template-group-body-' + category.id;
 
+      var toggleLabel = isExpanded ? 'Kategorie einklappen' : 'Kategorie aufklappen';
+
       return [
         '<section class="card template-group" aria-label="Kategorie ' + escapeHtml(category.name) + '">',
         '  <header class="template-group__head">',
@@ -136,9 +138,8 @@
         '      <p>' + escapeHtml(category.description) + '</p>',
         '      <small>' + escapeHtml(countLabel) + '</small>',
         '    </div>',
-        '    <button type="button" class="template-group__toggle" data-action="toggle-category" data-category-id="' + category.id + '" aria-expanded="' + (isExpanded ? 'true' : 'false') + '" aria-controls="' + bodyId + '"' + (state.query ? ' aria-disabled="true" title="Bei Suche geoeffnet"' : '') + '>',
-        '      <span>' + (isExpanded ? 'Einklappen' : 'Aufklappen') + '</span>',
-        '      <span class="template-group__toggle-icon" aria-hidden="true">' + (isExpanded ? '&#8722;' : '+') + '</span>',
+        '    <button type="button" class="template-group__toggle" data-action="toggle-category" data-category-id="' + category.id + '" aria-expanded="' + (isExpanded ? 'true' : 'false') + '" aria-controls="' + bodyId + '" aria-label="' + toggleLabel + '"' + (state.query ? ' aria-disabled="true" title="Bei Suche geoeffnet"' : '') + '>',
+        '      <span class="template-group__toggle-icon" aria-hidden="true">&#8250;</span>',
         '    </button>',
         '  </header>',
         '  <div class="template-group__content" id="' + bodyId + '"' + (isExpanded ? '' : ' hidden') + '>',
@@ -211,8 +212,8 @@
   }
 
   function createInitialExpandedMap(categories) {
-    return categories.reduce(function (acc, category, index) {
-      acc[category.id] = category.defaultExpanded === true || index < 2;
+    return categories.reduce(function (acc, category) {
+      acc[category.id] = false;
       return acc;
     }, {});
   }
