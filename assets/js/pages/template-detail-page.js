@@ -105,6 +105,22 @@
       }
     });
 
+    suggestionsListElement.addEventListener('focusin', function (event) {
+      var input = event.target.closest('[data-field]');
+      if (!input) {
+        return;
+      }
+
+      var field = String(input.getAttribute('data-field') || '');
+      if (field !== 'targetPrice' && field !== 'quantity') {
+        return;
+      }
+
+      if (typeof input.select === 'function') {
+        input.select();
+      }
+    });
+
     suggestionsListElement.addEventListener('blur', function (event) {
       var input = event.target.closest('[data-field]');
       if (!input) {

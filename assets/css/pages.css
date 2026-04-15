@@ -627,7 +627,7 @@ body[data-page="collection-detail"] .fab {
 .page-template-detail {
   display: grid;
   gap: 24px;
-  padding-bottom: calc(170px + env(safe-area-inset-bottom, 0px));
+  padding-bottom: calc(230px + env(safe-area-inset-bottom, 0px));
 }
 
 .template-detail-nav {
@@ -688,8 +688,17 @@ body[data-page="collection-detail"] .fab {
   max-width: 70ch;
 }
 
+.template-suggestions-hint {
+  margin: 6px 2px 2px;
+  color: var(--color-text-soft);
+  font-size: 0.86rem;
+  line-height: 1.48;
+  max-width: 80ch;
+}
+
 .template-suggestions-list {
   display: block;
+  margin-top: 16px;
 }
 
 .template-list-card {
@@ -715,17 +724,22 @@ body[data-page="collection-detail"] .fab {
   background: var(--color-surface-muted);
 }
 
+.template-row:focus-within {
+  background: color-mix(in srgb, var(--color-surface-muted) 82%, transparent);
+}
+
 .template-suggestion__check {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 22px;
+  width: 30px;
+  min-height: 30px;
   cursor: pointer;
 }
 
 .template-suggestion__check input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   margin: 0;
 }
 
@@ -736,8 +750,8 @@ body[data-page="collection-detail"] .fab {
 .template-suggestion__title-button {
   width: 100%;
   min-height: 30px;
-  padding: 4px 6px;
-  border: 1px solid transparent;
+  padding: 4px 8px;
+  border: 1px dashed transparent;
   border-radius: 8px;
   background: transparent;
   color: var(--color-text);
@@ -745,9 +759,22 @@ body[data-page="collection-detail"] .fab {
   font-weight: 620;
   text-align: left;
   cursor: text;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--color-text-soft) 34%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
 .template-suggestion__title-button:hover {
+  background: color-mix(in srgb, var(--color-surface-muted) 78%, transparent);
+  border-color: color-mix(in srgb, var(--color-border) 76%, transparent);
+  text-decoration-color: color-mix(in srgb, var(--color-text) 28%, transparent);
+}
+
+.template-suggestion__title-button:focus-visible {
+  outline: none;
+  border-color: color-mix(in srgb, var(--color-primary) 42%, transparent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-primary) 14%, transparent);
   background: var(--color-surface-muted);
 }
 
@@ -812,6 +839,17 @@ body[data-page="collection-detail"] .fab {
   width: 62px;
 }
 
+.template-suggestion__input[type="number"]::-webkit-outer-spin-button,
+.template-suggestion__input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.template-suggestion__input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
 .template-detail-footer-action {
   margin-top: 32px;
   display: flex;
@@ -822,7 +860,7 @@ body[data-page="collection-detail"] .fab {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  bottom: calc(44px + env(safe-area-inset-bottom, 0px));
   z-index: 100;
   width: auto;
   max-width: 90%;
@@ -1003,11 +1041,11 @@ body[data-page="collection-detail"] .fab {
   .template-floating-cta {
     width: calc(100% - 20px);
     max-width: 460px;
-    bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+    bottom: calc(28px + env(safe-area-inset-bottom, 0px));
   }
 
   .page-template-detail {
-    padding-bottom: calc(150px + env(safe-area-inset-bottom, 0px));
+    padding-bottom: calc(200px + env(safe-area-inset-bottom, 0px));
   }
 
   body[data-page="collection-detail"] .page-collection-detail {
