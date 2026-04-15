@@ -14,6 +14,7 @@
           name: 'Geburtstagsfeier',
           description: 'Alles Wichtige fuer eine entspannte Feier.',
           intro: 'Waehle aus, was du fuer den Geburtstag direkt uebernehmen willst.',
+          purposeText: 'Erstelle eine Einkaufsliste fuer deine naechste Geburtstagsfeier und plane Deko sowie Verbrauchsmaterial geordnet vor.',
           seoTitle: 'Vorlage Geburtstagsfeier | Costnest',
           seoDescription: 'Plane deine Geburtstagsfeier mit einer klaren Vorlage fuer typische Einkaeufe und ueberfuehre sie direkt in eine Sammlung.',
           suggestions: [
@@ -30,6 +31,7 @@
           name: 'Silvester',
           description: 'Getraenke, Deko und Basics fuer den Jahreswechsel.',
           intro: 'Aktiviere die Vorschlaege, die fuer deine Silvesterplanung passen.',
+          purposeText: 'Sammle typische Einkaeufe fuer Silvester an einem Ort, damit du schnell siehst, was noch fehlt.',
           seoTitle: 'Vorlage Silvester | Costnest',
           seoDescription: 'Nutze die Silvester-Vorlage, um typische Einkaeufe strukturiert zu sammeln und als Sammlung weiterzuverwenden.',
           suggestions: [
@@ -46,6 +48,7 @@
           name: 'Weihnachten',
           description: 'Typische Besorgungen fuer ruhige Feiertage.',
           intro: 'Setze nur die Punkte auf aktiv, die du in deine Weihnachtsliste uebernehmen willst.',
+          purposeText: 'Plane deine Weihnachts-Einkaeufe fruehzeitig und behalte bei wiederkehrenden Artikeln den Ueberblick.',
           seoTitle: 'Vorlage Weihnachten | Costnest',
           seoDescription: 'Erstelle mit der Weihnachts-Vorlage eine geordnete Einkaufssammlung fuer die Feiertage und behalte Kosten im Blick.',
           suggestions: [
@@ -70,6 +73,7 @@
           name: 'Zelten',
           description: 'Basis-Ausstattung fuer den Campingtrip.',
           intro: 'Waehle die Teile, die in deine Camping-Sammlung sollen.',
+          purposeText: 'Erstelle eine Einkaufsliste fuer deinen naechsten Strand- oder Campingurlaub mit den wichtigsten Basics.',
           seoTitle: 'Vorlage Urlaub Zelten | Costnest',
           seoDescription: 'Plane deinen Campingurlaub mit einer Vorlage fuer wichtige Ausruestung und uebernimm sie mit einem Klick als Sammlung.',
           suggestions: [
@@ -86,6 +90,7 @@
           name: 'Schiffsreise',
           description: 'Wichtige Reiseartikel fuer Tage an Bord.',
           intro: 'Markiere die Vorschlaege, die du fuer die Schiffsreise brauchst.',
+          purposeText: 'Bereite deine Schiffsreise strukturiert vor und halte Reiseartikel sowie geplante Kosten sauber zusammen.',
           seoTitle: 'Vorlage Urlaub Schiffsreise | Costnest',
           seoDescription: 'Nutze eine geordnete Schiffsreise-Vorlage fuer Reiseeinkaeufe und verwandle sie direkt in eine bearbeitbare Sammlung.',
           suggestions: [
@@ -102,6 +107,7 @@
           name: 'Staedtetrip',
           description: 'Kompakte Liste fuer kurze Reisen.',
           intro: 'Nimm nur mit, was fuer deinen Staedtetrip wirklich relevant ist.',
+          purposeText: 'Nutze diese Vorlage fuer einen kompakten Staedtetrip und ordne wiederkehrende Reiseeinkaeufe in einer Liste.',
           seoTitle: 'Vorlage Urlaub Staedtetrip | Costnest',
           seoDescription: 'Behalte beim Staedtetrip den Ueberblick: Vorlage auswaehlen, Einkaeufe ordnen und als Sammlung weiterverwenden.',
           suggestions: [
@@ -126,6 +132,7 @@
           name: 'Bueromaterial',
           description: 'Die wichtigsten Basics fuer den Arbeitsalltag.',
           intro: 'Aktiviere die Vorschlaege, die du in deine Material-Sammlung uebernehmen willst.',
+          purposeText: 'Erfasse deine Sammlung fuer Bueromaterialien, die du regelmaessig brauchst, und speichere Alternativen zum Sparen.',
           seoTitle: 'Vorlage Bueromaterial | Costnest',
           seoDescription: 'Ordne Bueroeinkaeufe mit der Vorlage Bueromaterial und erstelle daraus schnell eine wiederverwendbare Sammlung.',
           suggestions: [
@@ -142,6 +149,7 @@
           name: 'Homeoffice',
           description: 'Praktische Ausstattung fuer konzentriertes Arbeiten zu Hause.',
           intro: 'Waehle die Punkte aus, die du fuer dein Homeoffice einplanen willst.',
+          purposeText: 'Stelle eine uebersichtliche Homeoffice-Liste zusammen, damit wichtige Anschaffungen schnell vergleichbar bleiben.',
           seoTitle: 'Vorlage Homeoffice | Costnest',
           seoDescription: 'Die Homeoffice-Vorlage hilft dir, Arbeitsmaterial geordnet zu sammeln und geplante Ausgaben im Blick zu behalten.',
           suggestions: [
@@ -166,6 +174,7 @@
           name: 'Schulbeginn',
           description: 'Grundausstattung fuer den Start ins Schuljahr.',
           intro: 'Setze die Vorschlaege auf aktiv, die du direkt uebernehmen willst.',
+          purposeText: 'Plane den Schulstart mit einer klaren Liste fuer Material und behalte die Gesamtausgaben frueh im Blick.',
           seoTitle: 'Vorlage Schulbeginn | Costnest',
           seoDescription: 'Starte organisiert ins Schuljahr: mit der Vorlage Schulbeginn fuer wichtige Besorgungen und klare Kostenuebersicht.',
           suggestions: [
@@ -182,6 +191,7 @@
           name: 'Klassenfahrt',
           description: 'Packliste und Besorgungen fuer mehrtaegige Fahrten.',
           intro: 'Waehle die Punkte aus, die fuer die Klassenfahrt relevant sind.',
+          purposeText: 'Nutze die Vorlage fuer Klassenfahrten, um Ausruestung und Besorgungen geordnet und stressfrei vorzubereiten.',
           seoTitle: 'Vorlage Klassenfahrt | Costnest',
           seoDescription: 'Plane eine Klassenfahrt mit einer kompakten Vorlage fuer Packliste und typische Einkaeufe.',
           suggestions: [

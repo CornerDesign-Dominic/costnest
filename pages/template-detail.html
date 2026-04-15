@@ -45,15 +45,20 @@
 
     <section id="template-detail-content" hidden>
       <nav class="template-detail-nav" aria-label="Vorlagen Navigation">
-        <a class="template-back-link" href="templates.html">Zur Vorlagenuebersicht</a>
+        <a class="template-back-link" href="templates.html">
+          <span class="template-back-link__icon" aria-hidden="true">&#8249;</span>
+          <span>Zurueck zu den Vorlagen</span>
+        </a>
       </nav>
 
-      <section class="page-head page-head--with-action template-detail-head">
-        <div>
-          <p class="template-category" id="template-category"></p>
+      <section class="card template-detail-head">
+        <div class="template-detail-head__content">
           <h1 id="template-title">Vorlage</h1>
-          <p id="template-intro"></p>
+          <p id="template-purpose"></p>
         </div>
+      </section>
+
+      <section class="template-detail-top-action">
         <button type="button" class="button button-primary" id="convert-template-top">In Sammlung umwandeln</button>
       </section>
 
