@@ -17,7 +17,7 @@
       '  <div class="app-footer__inner">',
       '    <nav class="app-footer__nav" aria-label="Rechtliche Informationen">',
       '      <a href="' + pagePrefix + 'impressum.html">Impressum</a>',
-      '      <a href="' + pagePrefix + 'datenschutz.html">Datenschutz</a>',
+      '      <a href="/pages/datenschutz.html">Datenschutz</a>',
       '      <a href="' + pagePrefix + 'agb.html">AGB</a>',
       '    </nav>',
       '    <div class="app-footer__meta">',

@@ -14,6 +14,10 @@
       Costnest.toast.render();
     }
 
+    if (Costnest.cookieBanner && typeof Costnest.cookieBanner.render === 'function') {
+      Costnest.cookieBanner.render();
+    }
+
     if (Costnest.pages && Costnest.pages.home && typeof Costnest.pages.home.init === 'function') {
       Costnest.pages.home.init();
     }
