@@ -604,11 +604,12 @@ body[data-page="collection-detail"] .fab {
 
 .page-template-detail {
   display: grid;
-  gap: 16px;
+  gap: 24px;
 }
 
 .template-detail-nav {
-  margin-top: 2px;
+  margin-top: 0;
+  margin-bottom: 8px;
 }
 
 .template-back-link {
@@ -642,12 +643,12 @@ body[data-page="collection-detail"] .fab {
 
 .template-detail-head {
   margin-bottom: 0;
-  padding: clamp(16px, 2.6vw, 22px);
+  padding: clamp(20px, 2.8vw, 24px);
 }
 
 .template-detail-head__content {
   display: grid;
-  gap: 8px;
+  gap: 12px;
 }
 
 .template-detail-head h1 {
@@ -666,12 +667,14 @@ body[data-page="collection-detail"] .fab {
 
 .template-detail-top-action {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  margin-top: 8px;
+  margin-bottom: 32px;
 }
 
 .template-suggestions-list {
   display: grid;
-  gap: 10px;
+  gap: 12px;
 }
 
 .template-suggestion {
@@ -679,7 +682,8 @@ body[data-page="collection-detail"] .fab {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding: 12px 14px;
+  padding: 16px 18px;
+  min-height: 72px;
 }
 
 .template-suggestion__check {
@@ -720,15 +724,16 @@ body[data-page="collection-detail"] .fab {
 }
 
 .template-detail-footer-action {
-  margin-top: 4px;
+  margin-top: 32px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .template-related {
   display: grid;
-  gap: 10px;
-  padding: 14px;
+  gap: 16px;
+  padding: 16px;
+  margin-top: 40px;
 }
 
 .template-related h2 {
@@ -739,14 +744,14 @@ body[data-page="collection-detail"] .fab {
 .template-related nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
 }
 
 .template-related__link {
   display: inline-flex;
   align-items: center;
-  min-height: 30px;
-  padding: 0 10px;
+  min-height: 34px;
+  padding: 0 12px;
   border-radius: var(--radius-pill);
   border: 1px solid var(--color-border);
   background: var(--color-surface);

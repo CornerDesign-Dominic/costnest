@@ -98,7 +98,7 @@
     var isCollectionsArea = page === 'collections' || page === 'collection-detail';
     var isTemplatesPage = page === 'templates' || page === 'template-detail';
 
-    var homeHref = isHome ? 'index.html' : '../index.html';
+    var homeHref = '/';
     var collectionsHref = isHome ? 'pages/collections.html' : 'collections.html';
     var templatesHref = isHome ? 'pages/templates.html' : 'templates.html';
 
