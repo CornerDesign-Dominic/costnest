@@ -605,7 +605,7 @@ body[data-page="collection-detail"] .fab {
 .page-template-detail {
   display: grid;
   gap: 24px;
-  padding-bottom: 120px;
+  padding-bottom: calc(170px + env(safe-area-inset-bottom, 0px));
 }
 
 .template-detail-nav {
@@ -981,6 +981,10 @@ body[data-page="collection-detail"] .fab {
     width: calc(100% - 20px);
     max-width: 460px;
     bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .page-template-detail {
+    padding-bottom: calc(150px + env(safe-area-inset-bottom, 0px));
   }
 
   body[data-page="collection-detail"] .page-collection-detail {

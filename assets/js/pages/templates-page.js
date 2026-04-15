@@ -16,6 +16,7 @@
     }
 
     var categories = Costnest.templateRepository.getCategories();
+    var lastTrackedSearchQuery = '';
     var state = {
       activeCategory: 'all',
       query: '',
@@ -37,6 +38,7 @@
       }
 
       state.activeCategory = nextCategory;
+      trackTemplateFilter(nextCategory);
       renderFilters();
       renderGroups();
     });
@@ -62,6 +64,7 @@
 
     searchInput.addEventListener('input', function () {
       state.query = String(searchInput.value || '').trim().toLowerCase();
+      trackTemplateSearch(state.query);
       renderGroups();
     });
 
@@ -151,9 +154,11 @@
 
     function renderTemplateCard(template) {
       var suggestionCount = Array.isArray(template.suggestions) ? template.suggestions.length : 0;
-      var templateKey = template.slug || template.id;
+      var detailUrl = Costnest.routes && typeof Costnest.routes.getTemplateDetailUrl === 'function'
+        ? Costnest.routes.getTemplateDetailUrl(template)
+        : '#';
       return [
-        '<a class="template-card template-card--link" href="template-detail.html?templateId=' + encodeURIComponent(templateKey) + '">',
+        '<a class="template-card template-card--link" href="' + detailUrl + '">',
         '  <h3>' + escapeHtml(template.name) + '</h3>',
         '  <p>' + escapeHtml(template.description) + '</p>',
         '  <small>' + suggestionCount + ' Vorschlaege</small>',
@@ -163,6 +168,45 @@
 
     function matchesActiveCategory(category) {
       return state.activeCategory === 'all' || category.id === state.activeCategory;
+    }
+
+    function trackTemplateSearch(query) {
+      if (!query) {
+        lastTrackedSearchQuery = '';
+        return;
+      }
+
+      if (query === lastTrackedSearchQuery) {
+        return;
+      }
+
+      lastTrackedSearchQuery = query;
+      if (Costnest.analytics && typeof Costnest.analytics.trackEvent === 'function') {
+        Costnest.analytics.trackEvent('template_search', {
+          query_length: query.length
+        });
+      }
+    }
+
+    function trackTemplateFilter(categoryId) {
+      if (Costnest.analytics && typeof Costnest.analytics.trackEvent === 'function') {
+        Costnest.analytics.trackEvent('template_filter', {
+          category_id: categoryId,
+          category_name: getCategoryNameById(categoryId)
+        });
+      }
+    }
+
+    function getCategoryNameById(categoryId) {
+      if (categoryId === 'all') {
+        return 'Alle';
+      }
+
+      var match = categories.find(function (category) {
+        return category.id === categoryId;
+      });
+
+      return match ? match.name : '';
     }
   }
 

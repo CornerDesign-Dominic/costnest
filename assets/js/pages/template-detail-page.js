@@ -38,6 +38,7 @@
     titleElement.textContent = template.name;
     introCopyElement.textContent = template.intro || 'Diese Vorlage hilft dir beim schnellen Einstieg.';
     purposeCopyElement.textContent = template.purposeText || template.description || 'Waehle passende Vorschlaege aus und uebernimm sie in eine Sammlung.';
+    trackTemplateView();
     applyTemplateSeo(template);
     renderRelatedTemplates();
 
@@ -190,6 +191,8 @@
           };
         });
 
+      trackTemplateConvert(selectedSuggestions.length);
+
       var result = Costnest.domain
         && Costnest.domain.templates
         && typeof Costnest.domain.templates.createCollectionFromTemplate === 'function'
@@ -205,6 +208,27 @@
       }
 
       global.location.href = 'collection-detail.html?collectionId=' + encodeURIComponent(result.collection.id);
+    }
+
+    function trackTemplateView() {
+      if (Costnest.analytics && typeof Costnest.analytics.trackEvent === 'function') {
+        Costnest.analytics.trackEvent('template_view', {
+          template_name: template.name || '',
+          template_slug: template.slug || template.id || '',
+          category_name: template.categoryName || ''
+        });
+      }
+    }
+
+    function trackTemplateConvert(selectedCount) {
+      if (Costnest.analytics && typeof Costnest.analytics.trackEvent === 'function') {
+        Costnest.analytics.trackEvent('template_convert', {
+          template_name: template.name || '',
+          template_slug: template.slug || template.id || '',
+          category_name: template.categoryName || '',
+          selected_count: Number.isFinite(selectedCount) ? selectedCount : 0
+        });
+      }
     }
 
     function commitInlineField(input) {
@@ -326,7 +350,7 @@
 
     document.title = nextTitle;
     setMetaDescription(nextDescription);
-    setCanonicalUrl();
+    setCanonicalUrl(template);
   }
 
   function setMetaDescription(content) {
@@ -340,7 +364,7 @@
     meta.setAttribute('content', content);
   }
 
-  function setCanonicalUrl() {
+  function setCanonicalUrl(template) {
     var canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {
       canonical = document.createElement('link');
@@ -348,7 +372,14 @@
       document.head.appendChild(canonical);
     }
 
-    var url = new URL(global.location.href);
+    var url = null;
+    var templateKey = String(template && (template.slug || template.id) ? (template.slug || template.id) : '').trim();
+    if (templateKey && Costnest.routes && typeof Costnest.routes.getTemplateDetailUrlByKey === 'function') {
+      var detailUrl = Costnest.routes.getTemplateDetailUrlByKey(templateKey);
+      url = new URL(detailUrl, global.location.href);
+    } else {
+      url = new URL(global.location.href);
+    }
     url.hash = '';
     canonical.setAttribute('href', url.toString());
   }
@@ -419,9 +450,12 @@
   }
 
   function renderRelatedLinkFallback(template) {
-    var key = encodeURIComponent(String(template && (template.slug || template.id) ? (template.slug || template.id) : ''));
+    var key = String(template && (template.slug || template.id) ? (template.slug || template.id) : '');
+    var detailUrl = Costnest.routes && typeof Costnest.routes.getTemplateDetailUrlByKey === 'function'
+      ? Costnest.routes.getTemplateDetailUrlByKey(key)
+      : '#';
     var label = escapeHtml(String(template && template.name ? template.name : 'Vorlage'));
-    return '<a class="template-related__link" href="template-detail.html?templateId=' + key + '">' + label + '</a>';
+    return '<a class="template-related__link" href="' + detailUrl + '">' + label + '</a>';
   }
 
   function escapeHtml(value) {

@@ -2,10 +2,13 @@
   var Costnest = global.Costnest;
 
   function renderRelatedTemplateLink(template) {
-    var templateKey = encodeURIComponent(String(template && (template.slug || template.id) ? (template.slug || template.id) : ''));
+    var templateKey = String(template && (template.slug || template.id) ? (template.slug || template.id) : '');
+    var detailUrl = Costnest.routes && typeof Costnest.routes.getTemplateDetailUrlByKey === 'function'
+      ? Costnest.routes.getTemplateDetailUrlByKey(templateKey)
+      : '#';
     var label = escapeHtml(String(template && template.name ? template.name : 'Vorlage'));
 
-    return '<a class="template-related__link" href="template-detail.html?templateId=' + templateKey + '">' + label + '</a>';
+    return '<a class="template-related__link" href="' + detailUrl + '">' + label + '</a>';
   }
 
   function escapeHtml(value) {
