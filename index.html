@@ -3,9 +3,18 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Costnest | Links Bündeln</title>
-  <meta name="description" content="Preise und Wunschpreise in Sammlungen klar vergleichen.">
+  <title>Costnest | Einkaufsliste, Preise vergleichen, Budget planen</title>
+  <meta name="description" content="Erstelle Einkaufslisten für Geburtstag, Urlaub, Büro und Umzug. Vergleiche Preise aus mehreren Shops und plane dein Budget an einem Ort.">
   <link rel="canonical" href="https://costnest.app/" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Costnest Einkaufsliste und Budgetplanung",
+      "description": "Einkaufslisten erstellen, Preise aus mehreren Shops vergleichen und Budget planen.",
+      "url": "https://costnest.app/"
+    }
+  </script>
   <script>
     (function () {
       var key = 'costnest.theme';
@@ -41,38 +50,130 @@
   <main id="content" class="page page-home">
     <section class="home-hero" id="costnest" aria-labelledby="home-hero-title">
       <div class="home-hero__content">
-        <h1 id="home-hero-title">Sammlungen statt offener Tabs.</h1>
-        <p class="home-subline">Sammle Produkte aus verschiedenen Shops, vergleiche Preise und behalte dein Budget im Griff.</p>
+        <p class="home-eyebrow">Einkaufsliste, Preisvergleich und Budgetplanung</p>
+        <h1 id="home-hero-title">Einkaufslisten mit Preisen: planen, vergleichen, Budget halten.</h1>
+        <p class="home-subline">Für Geburtstag, Urlaub, Büromaterial und Umzug: Sammle alle Produkte an einem Ort, vergleiche Shoppreise und entscheide mit klarem Kostenbild.</p>
+        <div class="home-cta-group">
+          <button type="button" class="button button-primary" id="start-first-collection">Kostenlos starten</button>
+          <a class="button button-ghost" href="pages/templates.html">Vorlagen nutzen</a>
+        </div>
         <ul class="home-trust-list" aria-label="Vorteile auf einen Blick">
-          <li>Für Vorhaben mit Plan</li>
-          <li>Alles an einem Ort</li>
-          <li>Schneller mit Vorlagen starten</li>
+          <li>Mehrere Shops, eine Liste</li>
+          <li>Kosten pro Liste im Blick</li>
+          <li>Listen wiederverwenden</li>
         </ul>
       </div>
       <aside class="home-hero__preview" aria-label="Vorschau">
         <article class="home-preview-card">
           <header class="home-preview-card__head">
-            <h2>Sommerfest</h2>
-            <span>6 Produkte</span>
+            <h2>Einkaufsliste Geburtstag</h2>
+            <span>5 von 12 erledigt</span>
           </header>
-          <ul class="home-preview-list" aria-label="Beispielhafte Produkte">
-            <li><span>amazon.de</span><strong>Lichterkette</strong></li>
-            <li><span>ikea.com</span><strong>Pappteller-Set</strong></li>
-            <li><span>office-discount.de</span><strong>Servietten</strong></li>
+          <ul class="home-preview-checklist" aria-label="Pack- und Einkaufspunkte">
+            <li><span class="is-done" aria-hidden="true">&#10003;</span><span>Lichterkette besorgt</span></li>
+            <li><span class="is-open" aria-hidden="true"></span><span>Pappteller einpacken</span></li>
+            <li><span class="is-open" aria-hidden="true"></span><span>Getränke vergleichen</span></li>
           </ul>
-          <div class="home-preview-card__kpis">
+          <div class="home-preview-prices" aria-label="Preisvergleich">
             <div>
-              <small>Ist gesamt</small>
-              <strong>186,40 €</strong>
+              <small>Lichterkette</small>
+              <strong>Shop A 24,90 €</strong>
+              <span>Shop B 19,90 €</span>
             </div>
             <div>
-              <small>Budget</small>
-              <strong>220,00 €</strong>
+              <small>Pappteller Set</small>
+              <strong>Shop A 8,99 €</strong>
+              <span>Shop B 6,49 €</span>
             </div>
           </div>
-          <p class="home-preview-card__hint">Alles gesammelt. Budget im Blick.</p>
+          <div class="home-preview-budget" aria-label="Budgetfortschritt">
+            <div class="home-preview-budget__head">
+              <small>Budget</small>
+              <strong>186,40 € von 240,00 €</strong>
+            </div>
+            <div class="home-preview-budget__bar" role="img" aria-label="Budget zu 78 Prozent genutzt">
+              <span style="width: 78%;"></span>
+            </div>
+          </div>
         </article>
       </aside>
+    </section>
+
+    <section class="home-use-cases" aria-labelledby="home-use-cases-title">
+      <header class="home-use-cases__head">
+        <h2 id="home-use-cases-title">Perfekt für deine Planung</h2>
+      </header>
+      <div class="home-use-cases__grid">
+        <article class="home-use-case">
+          <span class="home-use-case__icon" aria-hidden="true">🎂</span>
+          <h3>Geburtstag planen</h3>
+          <p>Behalte Deko, Essen und Verbrauchsmaterial in einer Einkaufsliste zusammen.</p>
+        </article>
+        <article class="home-use-case">
+          <span class="home-use-case__icon" aria-hidden="true">🏖️</span>
+          <h3>Urlaub packen</h3>
+          <p>Nutze Packlisten mit Preisen, damit vor der Abreise nichts fehlt.</p>
+        </article>
+        <article class="home-use-case">
+          <span class="home-use-case__icon" aria-hidden="true">🗂️</span>
+          <h3>Büromaterial verwalten</h3>
+          <p>Plane Nachbestellungen aus mehreren Shops ohne offene Vergleichstabellen.</p>
+        </article>
+        <article class="home-use-case">
+          <span class="home-use-case__icon" aria-hidden="true">📦</span>
+          <h3>Umzug organisieren</h3>
+          <p>Sortiere alle Anschaffungen und halte dein Umzugsbudget dauerhaft im Blick.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="home-templates-popular" aria-labelledby="home-templates-popular-title">
+      <header class="home-templates-popular__head">
+        <h2 id="home-templates-popular-title">Beliebte Vorlagen</h2>
+        <p>Starte mit einer fertigen Einkaufsliste und passe sie direkt auf dein Vorhaben an.</p>
+      </header>
+      <div class="home-templates-popular__grid">
+        <article class="home-template-card">
+          <h3>Einkaufsliste Geburtstag</h3>
+          <p>Plane Deko, Geschirr und Snacks strukturiert und bereite späteren Export sauber vor.</p>
+          <a class="button button-ghost home-template-card__cta" href="pages/template-detail.html?templateId=geburtstagsfeier">Vorlage verwenden</a>
+        </article>
+        <article class="home-template-card">
+          <h3>Packliste Urlaub</h3>
+          <p>Vergleiche Preise für Reiseartikel und halte die Packliste für jeden Trip wiederverwendbar.</p>
+          <a class="button button-ghost home-template-card__cta" href="pages/template-detail.html?templateId=urlaub-zelten">Vorlage verwenden</a>
+        </article>
+        <article class="home-template-card">
+          <h3>Büromaterial Liste</h3>
+          <p>Erfasse Standardartikel für Büro oder Homeoffice und kaufe bei Bedarf schneller nach.</p>
+          <a class="button button-ghost home-template-card__cta" href="pages/template-detail.html?templateId=bueromaterial">Vorlage verwenden</a>
+        </article>
+        <article class="home-template-card">
+          <h3>Umzugs-Checkliste</h3>
+          <p>Halte wichtige Anschaffungen mit Mengen und Zielpreisen für den Umzug zentral zusammen.</p>
+          <a class="button button-ghost home-template-card__cta" href="pages/templates.html">Vorlage verwenden</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="home-benefits" aria-labelledby="home-benefits-title">
+      <header class="home-benefits__head">
+        <h2 id="home-benefits-title">Warum Costnest für Einkaufsplanung genutzt wird</h2>
+      </header>
+      <div class="home-benefits__grid">
+        <article class="home-benefit">
+          <h3>Vergleiche Preise aus verschiedenen Shops</h3>
+          <p>Sieh auf einen Blick, welcher Shop für jedes Produkt den besseren Preis bietet.</p>
+        </article>
+        <article class="home-benefit">
+          <h3>Behalte dein Budget in Echtzeit im Blick</h3>
+          <p>Jede Liste zeigt dir sofort den aktuellen Stand und die Differenz zu deinen Zielpreisen.</p>
+        </article>
+        <article class="home-benefit">
+          <h3>Speichere Listen und nutze sie immer wieder</h3>
+          <p>Einmal angelegt, kannst du Vorhaben bei Bedarf erneut verwenden und schneller entscheiden.</p>
+        </article>
+      </div>
     </section>
 
     <section class="home-dual-cards" aria-label="Schneller Einstieg">
@@ -86,26 +187,6 @@
         <p>Du weißt, was du brauchst. Starte direkt mit deiner eigenen Sammlung und behalte alles an einem Ort im Blick.</p>
         <button type="button" class="button button-primary home-dual-card__cta" id="start-first-collection-secondary">Sammlung starten</button>
       </article>
-    </section>
-
-    <section class="home-benefits" aria-labelledby="home-benefits-title">
-      <header class="home-benefits__head">
-        <h2 id="home-benefits-title">Klare Planung für wiederkehrende und besondere Einkäufe</h2>
-      </header>
-      <div class="home-benefits__grid">
-        <article class="home-benefit">
-          <h3>Alles für dein Vorhaben an einem Ort</h3>
-          <p>Lege Sammlungen an und bündle Produkte aus verschiedenen Shops übersichtlich an einer Stelle.</p>
-        </article>
-        <article class="home-benefit">
-          <h3>Kosten und Budget im Blick behalten</h3>
-          <p>Sieh sofort, was dein Vorhaben aktuell kostet und wie weit du von deinem Ziel entfernt bist.</p>
-        </article>
-        <article class="home-benefit">
-          <h3>Sammlungen später wiederverwenden</h3>
-          <p>Einmal sauber organisiert und bei der nächsten Feier, fürs Büro oder für Wiederkäufe direkt wieder da.</p>
-        </article>
-      </div>
     </section>
 
   </main>
