@@ -154,8 +154,8 @@
     function syncConvertButtons() {
       var selectedCount = countSelected();
       var label = selectedCount > 0
-        ? 'In Sammlung umwandeln (' + selectedCount + ')'
-        : 'In Sammlung umwandeln (0)';
+        ? 'Sammlung erstellen (' + selectedCount + ')'
+        : 'Sammlung erstellen (0)';
 
       bottomConvertButton.textContent = label;
     }

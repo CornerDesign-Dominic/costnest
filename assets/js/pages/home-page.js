@@ -18,7 +18,8 @@
 
     var startButtons = [
       document.getElementById('start-first-collection'),
-      document.getElementById('start-first-collection-cta')
+      document.getElementById('start-first-collection-cta'),
+      document.getElementById('start-first-collection-secondary')
     ];
 
     startButtons.forEach(function (button) {
