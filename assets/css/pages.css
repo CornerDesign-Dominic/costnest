@@ -627,7 +627,7 @@ body[data-page="collection-detail"] .fab {
 .page-template-detail {
   display: grid;
   gap: 24px;
-  padding-bottom: calc(230px + env(safe-area-inset-bottom, 0px));
+  padding-bottom: calc(300px + env(safe-area-inset-bottom, 0px));
 }
 
 .template-detail-nav {
@@ -689,11 +689,12 @@ body[data-page="collection-detail"] .fab {
 }
 
 .template-suggestions-hint {
-  margin: 6px 2px 2px;
+  margin: 14px 0 8px;
+  padding: 0 2px;
   color: var(--color-text-soft);
-  font-size: 0.86rem;
-  line-height: 1.48;
-  max-width: 80ch;
+  font-size: 0.88rem;
+  line-height: 1.62;
+  max-width: 72ch;
 }
 
 .template-suggestions-list {
@@ -751,31 +752,32 @@ body[data-page="collection-detail"] .fab {
   width: 100%;
   min-height: 30px;
   padding: 4px 8px;
-  border: 1px dashed transparent;
+  border: 1px dashed color-mix(in srgb, var(--color-border) 82%, transparent);
   border-radius: 8px;
-  background: transparent;
+  background: color-mix(in srgb, var(--color-surface-muted) 42%, transparent);
   color: var(--color-text);
   font-size: 0.92rem;
   font-weight: 620;
   text-align: left;
   cursor: text;
   text-decoration: underline;
-  text-decoration-color: color-mix(in srgb, var(--color-text-soft) 34%, transparent);
+  text-decoration-color: color-mix(in srgb, var(--color-text-soft) 54%, transparent);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
 
 .template-suggestion__title-button:hover {
-  background: color-mix(in srgb, var(--color-surface-muted) 78%, transparent);
-  border-color: color-mix(in srgb, var(--color-border) 76%, transparent);
-  text-decoration-color: color-mix(in srgb, var(--color-text) 28%, transparent);
+  background: color-mix(in srgb, var(--color-surface-muted) 90%, transparent);
+  border-color: color-mix(in srgb, var(--color-border) 92%, transparent);
+  text-decoration-color: color-mix(in srgb, var(--color-text) 48%, transparent);
 }
 
 .template-suggestion__title-button:focus-visible {
   outline: none;
-  border-color: color-mix(in srgb, var(--color-primary) 42%, transparent);
-  box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-primary) 14%, transparent);
+  border-color: color-mix(in srgb, var(--color-primary) 62%, transparent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 20%, transparent);
   background: var(--color-surface-muted);
+  text-decoration-color: color-mix(in srgb, var(--color-primary) 46%, transparent);
 }
 
 .template-suggestion__title-input {
@@ -860,7 +862,7 @@ body[data-page="collection-detail"] .fab {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  bottom: calc(44px + env(safe-area-inset-bottom, 0px));
+  bottom: calc(72px + env(safe-area-inset-bottom, 0px));
   z-index: 100;
   width: auto;
   max-width: 90%;
@@ -1041,11 +1043,11 @@ body[data-page="collection-detail"] .fab {
   .template-floating-cta {
     width: calc(100% - 20px);
     max-width: 460px;
-    bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+    bottom: calc(42px + env(safe-area-inset-bottom, 0px));
   }
 
   .page-template-detail {
-    padding-bottom: calc(200px + env(safe-area-inset-bottom, 0px));
+    padding-bottom: calc(240px + env(safe-area-inset-bottom, 0px));
   }
 
   body[data-page="collection-detail"] .page-collection-detail {
