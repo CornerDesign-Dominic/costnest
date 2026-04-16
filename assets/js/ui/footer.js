@@ -22,7 +22,7 @@
       '    </nav>',
       '    <div class="app-footer__meta">',
       '      <small class="app-footer__version">' + versionText + '</small>',
-      '      <small class="app-footer__copy">&copy; Costnest</small>',
+      '      <small class="app-footer__copy">Costnest</small>',
       '    </div>',
       '  </div>',
       '</footer>'
